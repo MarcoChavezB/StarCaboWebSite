@@ -3,7 +3,7 @@
     <div class="animation" v-if="showAnimation">
         <animation/>
     </div>
-    <div class="app" v-if="showCont">
+    <div class="app" v-if="showCont" :class="{'ease-in':showCont}">
         <div class="back">
             <div class="headerComp">
                 <HeaderComp />
@@ -56,5 +56,18 @@ watch(() => store.variableDeEstado, (value) => {
     background: url('../src/assets/Img/fotos/backgroundimg.webp') center center / cover no-repeat;;
 }
 
+.ease-in{
+    animation: fadeIn 1s ease-in-out
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 </style>
