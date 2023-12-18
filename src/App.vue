@@ -21,9 +21,20 @@
 
 import HeaderComp from "./components/Principal/TopNavbar.vue";
 import animation from "./components/Principal/animation.vue";
-import {ref} from 'vue'
+import {ref, watch} from 'vue'
+import { useMiStore } from './stores/cunter';
+
+const store = useMiStore();
 const showAnimation = ref(true)
 const showCont = ref(false)
+
+watch(() => store.variableDeEstado, (value) => {
+    if(value){
+        showAnimation.value = false
+        showCont.value = true
+    }
+})
+
 </script>
 
 <style scoped>

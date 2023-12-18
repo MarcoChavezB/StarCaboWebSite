@@ -62,7 +62,6 @@ import btOrange from "../components/controllers/btOrangeRight.vue"
 import zona from "../components/General/zonas.vue"
 import hotelCard from "../components/cards/hotelCard.vue"
 
-
 </script>
 
 

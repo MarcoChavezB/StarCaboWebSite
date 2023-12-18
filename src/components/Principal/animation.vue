@@ -40,13 +40,14 @@
 </template>
   
 <script setup>
-import { ref, defineEmits } from 'vue';
+import {ref} from 'vue';
+import { useMiStore } from '../../stores/cunter';
 
 const showRounder = ref(true);
 const showBodyCont = ref(false);
-const bodyAnimation = ref(false);
 const outCard = ref(false);
 const showCard = ref(false);
+const store = useMiStore();
 
 setTimeout(() => {
   showRounder.value = false;
@@ -58,8 +59,10 @@ const hAnimation = () => {
   outCard.value = true;
   setTimeout(() => {
     showCard.value = false;
+    store.cambiarVariableDeEstado(true);    
   }, 1500);
 };
+
 </script>
 
 
