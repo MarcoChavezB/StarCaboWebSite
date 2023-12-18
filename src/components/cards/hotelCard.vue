@@ -1,56 +1,40 @@
 <template>
-    <a href="#" class="block rounded-lg p-4 shadow-sm shadow-indigo-100">
-  <img
-    alt="Home"
-    src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-    class="h-56 w-full rounded-md object-cover"
-  />
-
-  <div class="mt-2">
-    <dl>
-      <div>
-        <dt class="sr-only">Price</dt>
-
-        <dd class="text-sm text-gray-500">$240,000</dd>
-      </div>
-
-      <div>
-        <dt class="sr-only">Address</dt>
-
-        <dd class="font-medium">123 Wallaby Avenue, Park Road</dd>
-      </div>
-    </dl>
-
-    <div class="mt-6 flex items-center gap-8 text-xs">
-
-      <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-        <svg
-          class="h-4 w-4 text-indigo-700"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-          />
-        </svg>
-
-        <div class="mt-1.5 sm:mt-0">
-          <p class="text-gray-500">Parking</p>
-
-          <p class="font-medium">2 spaces</p>
-        </div>
-      </div>
-
+  <div class="shadow-xl grid grid-cols-1 grid-rows-3">
+    <figure class="img" :style="{ backgroundImage: `url('${img}')` }"></figure>
+    <div class="card-body ">
+      <h2 class="card-title">
+        {{ title }}
+      </h2>
     </div>
   </div>
-</a>
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+  import {defineProps} from 'vue'
+  const props = defineProps({
+    img: String,
+    title: String
+  })
 </script>
+
+
+<style scoped>
+.img {
+  height: auto; 
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  margin: 0;
+}
+
+.grid-rows-3{
+  grid-template-rows: 2fr 1fr;
+}
+</style>
