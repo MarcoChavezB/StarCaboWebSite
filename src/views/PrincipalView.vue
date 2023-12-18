@@ -40,9 +40,12 @@
         </div>
 
         <!--Seccion 3-->
-        <div class="sec3 grid grid-cols-1 grid-rows-2 gap-0">
+        <div class="sec3 bg-red-700 grid grid-cols-1 grid-rows-2 gap-0">
             <div class="contenedor flex justify-center items-center ">
-                <div class="zonas grid grid-cols-5 grid-rows-1 gap-0 ">
+                <div class="zonas grid grid-cols-4 grid-rows-1 gap-10 ">
+                    <hotelCard/>
+                    <hotelCard/>
+                    <hotelCard/>
                     <hotelCard/>
                 </div>
             </div>
@@ -58,6 +61,8 @@
 import btOrange from "../components/controllers/btOrangeRight.vue" 
 import zona from "../components/General/zonas.vue"
 import hotelCard from "../components/cards/hotelCard.vue"
+
+
 </script>
 
 

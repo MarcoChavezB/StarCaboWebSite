@@ -1,19 +1,29 @@
 <template>
-    <div class="app">
+   <div class="bod">
+    <div class="animation" v-if="showAnimation">
+        <animation/>
+    </div>
+    <div class="app" v-if="showCont">
         <div class="back">
             <div class="headerComp">
                 <HeaderComp />
             </div>
             <div class="bodyComp">
                 <router-view/>
-            </div>
+            </div>  
         </div>
         <div class="footerComp"></div>
     </div>
+   </div>
 </template>
 
 <script setup>
+
 import HeaderComp from "./components/Principal/TopNavbar.vue";
+import animation from "./components/Principal/animation.vue";
+import {ref} from 'vue'
+const showAnimation = ref(true)
+const showCont = ref(false)
 </script>
 
 <style scoped>
@@ -33,7 +43,6 @@ import HeaderComp from "./components/Principal/TopNavbar.vue";
     background-color: red;
     height: 130vh;
     background: url('../src/assets/Img/fotos/backgroundimg.webp') center center / cover no-repeat;;
-
 }
 
 
