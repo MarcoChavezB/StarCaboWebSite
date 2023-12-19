@@ -23,4 +23,5 @@ const props = defineProps({
     width: 10rem;
 }
 
+
 </style>
