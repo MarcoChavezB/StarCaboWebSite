@@ -18,8 +18,9 @@ const props = defineProps({
 <style scoped>
 .btOrange {
     background-color: #F0582B;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
+    width: 10rem;
 }
 
 </style>

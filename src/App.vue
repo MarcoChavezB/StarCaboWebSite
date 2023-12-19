@@ -12,7 +12,6 @@
                 <router-view/>
             </div>  
         </div>
-        <div class="footerComp"></div>
     </div>
    </div>
 </template>
@@ -43,7 +42,7 @@ watch(() => store.variableDeEstado, (value) => {
     width: 100%;
     display: grid;
     grid-auto-columns: 1fr;
-    grid-template-rows: 2.4fr 0.4fr;
+    grid-template-rows: 2.4fr 0.4fr ;
     gap: 0px 0px;
 }
 .back{

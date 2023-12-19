@@ -27,11 +27,11 @@
         <div class="sec2 grid grid-cols-1 grid-rows-2 gap-0">
             <div class="contenedor flex justify-center items-center ">
                 <div class="zonas grid grid-cols-5 grid-rows-1 gap-0 ">
-                    <zona text="Diamante" image="src\assets\Img\icons\diamond.png"/>
-                    <zona text="Cabo San Lucas" image="src\assets\Img\icons\beach.png"/>
-                    <zona text="The corridor" image="src\assets\Img\icons\bridge.png"/>
-                    <zona text="San Jose del Cabo" image="src\assets\Img\icons\desert.png"/>
-                    <zona text="Puerto los Cabos" image="src\assets\Img\icons\water.png"/>
+                    <zona text="Diamante" image="src\assets\Img\icons\diamond.png" />
+                    <zona text="Cabo San Lucas" image="src\assets\Img\icons\beach.png" />
+                    <zona text="The corridor" image="src\assets\Img\icons\bridge.png" />
+                    <zona text="San Jose del Cabo" image="src\assets\Img\icons\desert.png" />
+                    <zona text="Puerto los Cabos" image="src\assets\Img\icons\water.png" />
                 </div>
             </div>
             <div class="bg-red text flex justify-center items-center">
@@ -43,13 +43,13 @@
         <div class="sec3 bg-red-700 grid grid-cols-1 grid-rows-2 gap-0">
             <div class="contenedor flex justify-center items-center ">
                 <div class="zonas grid grid-cols-4 grid-rows-1 gap-10 ">
-                    <hotelCard img="src/assets/Img/fotos/palm.webp" title="El arco"/>
-                    <hotelCard img="src/assets/Img/fotos/cabos.webp" title="El arco"/>
-                    <hotelCard img="src/assets/Img/fotos/persona.webp" title="El arco"/>
-                    <hotelCard img="src/assets/Img/fotos/backgroundimg.webp" title="El arco"/>
+                    <hotelCard img="src/assets/Img/fotos/palm.webp" title="El arco" />
+                    <hotelCard img="src/assets/Img/fotos/cabos.webp" title="El arco" />
+                    <hotelCard img="src/assets/Img/fotos/persona.webp" title="El arco" />
+                    <hotelCard img="src/assets/Img/fotos/backgroundimg.webp" title="El arco" />
                 </div>
             </div>
-            
+
             <div class="subj flex justify-center items-center ">
                 <div class="titles grid grid-cols-1 grid-rows-2 w-1/2">
                     <div class="title1 text-center">
@@ -72,13 +72,14 @@
                             Exceptional adventures every time, we bring you to them
                         </div>
                     </div>
-                        <div class="flex justify-center h-full zoneIte ">
-                            <div class="textzone grid grid-rows-4 grid-cols-1">
+                    <div class="flex justify-center h-full zoneIte ">
+                        <div class="textzone grid grid-rows-4 grid-cols-1">
                             <div class="title2">
                                 <h2>Our services are the best</h2>
                             </div>
                             <div class="subtitle2">
-                                <h4>we are a transportation company dedicated to our clients, we take them to their dreams with the best quality of service and experience.</h4>
+                                <h4>we are a transportation company dedicated to our clients, we take them to their dreams
+                                    with the best quality of service and experience.</h4>
                             </div>
                             <div class="zones grid grid-rows-2 grid-cols-2">
                                 <div class="airport flex gap-4">
@@ -121,25 +122,29 @@
                 </div>
                 <div class="points grid grid-cols-3 grid-rows-1">
                     <div class="destination flex justify-center items-center flex-col">
-                        <div class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden rounded-full">
+                        <div
+                            class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden rounded-full">
                             <span class="material-symbols-outlined orange">distance</span>
                         </div>
-                        <h4>Select your destination</h4>
-                        <h5 class="text-center w-2/3 subtext">you can find your hotel destination in all regions of Los Cabos </h5>
+                        <h4 class="tit">Select your destination</h4>
+                        <h5 class="text-center w-2/3 subtext">you can find your hotel destination in all regions of Los
+                            Cabos </h5>
                     </div>
                     <div class="service flex justify-center items-center flex-col">
-                        <div class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden rounded-full">
+                        <div
+                            class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden rounded-full">
                             <span class="material-symbols-outlined orange">description</span>
                         </div>
-                        <h4>Make your service</h4>
-                        <h5 class="text-center w-2/3 subtext">you can find your hotel destination in all regions of Los Cabos </h5>
+                        <h4 class="tit">Make your service</h4>
+                        <h5 class="text-center w-2/3 subtext">You can make your service in this website</h5>
                     </div>
                     <div class="pay flex justify-center items-center flex-col">
-                        <div class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden rounded-full">
+                        <div
+                            class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden rounded-full">
                             <span class="material-symbols-outlined orange">payments</span>
                         </div>
-                        <h4>Pay in arrive</h4>
-                        <h5 class="text-center w-2/3 subtext">you can find your hotel destination in all regions of Los Cabos </h5>
+                        <h4 class="tit">Pay in arrive</h4>
+                        <h5 class="text-center w-2/3 subtext">Pay when you arrive at your destination</h5>
                     </div>
                 </div>
             </div>
@@ -147,43 +152,98 @@
 
         <!--Seccion 5-->
 
+        <div class="sec5">
+            <div class="contenido">
+                <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 cabos">
+                    <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+                        <div class="mx-auto max-w-xl flex flex-col gap-20 h-full ltr:sm:text-left rtl:sm:text-right">
+                            <h2 class="texto ">
+                                Let's explore the bauty of los Cabos
+                            </h2>
+                            <borderButton text="Get started"/>
+                        </div>
+                    </div>
+                    <div class="imagesSec5 grid grid-cols-3 grid-rows-1 gap-3">
+                        <div class="img1">
+                            <img src="../assets/Img/fotos/palm.webp" alt="">
+                        </div>
+                        <div class="img2">
+                            <img src="../assets/Img/fotos/palm.webp" alt="">
+                        </div>
+                        <div class="img3">
+                            <img src="../assets/Img/fotos/palm.webp" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup>
-import btOrange from "../components/controllers/btOrangeRight.vue" 
+import btOrange from "../components/controllers/btOrangeRight.vue"
 import zona from "../components/General/zonas.vue"
 import hotelCard from "../components/cards/hotelCard.vue"
-
+import borderButton from "../components/controllers/btOrange.vue"
 </script>
 
 
 <style scoped>
-.zoneIte{
+.texto{
+    color: white;
+    font-weight: 1000;
+    font-size: 2.5rem;
+}
+.img1, .img2, .img3{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.img2{
+    
+}
+.cabos{
+    background-color: #312E1B;
+}
+.imagesSec5{
+    margin-right: 20px;
+}
+.tit {
+    margin-top: 30px;
+}
+
+.zoneIte {
     margin-right: 2rem;
 }
-.destination{
+
+.destination {
     margin-left: 20px;
 }
-.subtext{
+
+.subtext {
     font-size: 1rem;
     opacity: 0.5;
 }
-.pay{
+
+.pay {
     margin-right: 20px;
 }
-.orange{
+
+.orange {
     color: #f0582b;
 }
-.relative{
+
+.relative {
     background-color: white;
 }
-.title2{
+
+.title2 {
     color: #f0582b;
     font-size: 2rem;
     font-weight: 1000;
 }
-.img{
+
+.img {
     position: relative;
     left: 90px;
     width: 70%;
@@ -192,7 +252,7 @@ import hotelCard from "../components/cards/hotelCard.vue"
     background: url('../src/assets/Img/fotos/surf.webp') center center / cover no-repeat;
 }
 
-.titleImg{
+.titleImg {
     position: relative;
     left: -100px;
     top: 150px;
@@ -201,7 +261,8 @@ import hotelCard from "../components/cards/hotelCard.vue"
     background-color: white;
     border-radius: 20px;
 }
-.seccionZonas{
+
+.seccionZonas {
     width: 100%;
     height: 100%;
 }
@@ -210,52 +271,56 @@ import hotelCard from "../components/cards/hotelCard.vue"
     height: 100vh;
 }
 
-.sec3{
+.sec3 {
     height: 100vh;
 }
-.sec4{
+
+.sec4 {
     height: 100vh;
     grid-template-rows: 2fr 1fr;
 
 }
 
-.sec5{
+.sec5 {
     height: 70vh;
 }
 
 
 
-.secciones{
-    display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-rows: 1fr 0.5fr 1fr 1fr; 
-  gap: 0px 0px; 
+.secciones {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr 1fr;
+    gap: 0px 0px;
 }
 
-.zonas{
+.zonas {
     height: 60%;
     width: 90%;
 }
-.orangeText{
+
+.orangeText {
     color: #f0582b;
     font-size: 3rem;
 }
+
 .cont {
     height: 70%;
     width: 70%;
 }
 
-.sec2{
+.sec2 {
     background-color: #f5f4ed;
     border-radius: 50px 50px 0px 0px;
 }
 
-.sec3, .sec4, .sec5{
+.sec3,
+.sec4,
+.sec5 {
     background-color: #f5f4ed;
 }
 
 .conflec {
     width: 25%;
 
-}
-</style>
+}</style>
