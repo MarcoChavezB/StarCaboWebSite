@@ -1,12 +1,14 @@
 <template>
     <div class="secciones">
-        <!--Seccion 1-->
+
+<!--Seccion 1-->
         <div class="sec1">
             <div class="principalView h-full w-full flex flex-col justify-center items-center">
                 <div class="cont">
                     <div class="title h-1/3">
                         <h1 class="text-white text-center">find the next place to explore
-                            the beauty of the world</h1>
+                            the beauty of the world
+                        </h1>
                     </div>
                     <div class="subtilt h-1/3">
                         <h4 class="text-center">Live the best experience in star cabo
@@ -22,12 +24,17 @@
                 </div>
             </div>
         </div>
-        <div class="border" style="border-radius: 20px 20px 0px 0px;"></div>
-        <!--Seccion 2-->
-        <div class="sec2 grid grid-cols-1 grid-rows-2 gap-0">
+
+<!--Seccion 2-->
+        <div class="borderr" style="border-radius: 20px 20px 0px 0px;"></div>
+
+<!--Seccion 3-->
+        <div class="sec2 grid grid-cols-1 grid-rows-2 gap-0 ">
             <div class="contenedor flex justify-center items-center ">
-                <div class="zonas grid grid-cols-5 grid-rows-1 gap-0 ">
-                    <zona text="Diamante" image="src\assets\Img\icons\diamond.png" />
+                <div class="zonas  grid grid-cols-5 grid-rows-1 gap-0 ">
+                    <div class="zon ">
+                        <zona text="Diamante" image="src\assets\Img\icons\diamond.png" />
+                    </div>
                     <zona text="Cabo San Lucas" image="src\assets\Img\icons\beach.png" />
                     <zona text="The corridor" image="src\assets\Img\icons\bridge.png" />
                     <zona text="San Jose del Cabo" image="src\assets\Img\icons\desert.png" />
@@ -35,14 +42,14 @@
                 </div>
             </div>
         </div>
+
+<!--Seccion 4-->
         <div class="sec3">
             <div class="text flex justify-center items-center">
-                <h2 class="orangeText text-center w-full">Recomended popular destinations</h2>
+                <h2 class="orangeText text-center w-full ">
+                    Recomended popular destinations
+                </h2>
             </div>
-        </div>
-
-        <!--Seccion 3-->
-        <div class="sec4 grid grid-cols-1 grid-rows-2 gap-0">
             <div class="contenedor flex justify-center items-center ">
                 <div class="zonas grid grid-cols-4 grid-rows-1 gap-10 ">
                     <hotelCard img="src/assets/Img/fotos/palm.webp" title="El arco" />
@@ -51,10 +58,13 @@
                     <hotelCard img="src/assets/Img/fotos/backgroundimg.webp" title="El arco" />
                 </div>
             </div>
+        </div>
 
-            <div class="subj flex justify-center items-center ">
+<!--Seccion 5-->
+        <div class="sec4">
+            <div class="subj flex justify-center items-center h-full">
                 <div class="titles grid grid-cols-1 grid-rows-2 w-1/2">
-                    <div class="title1 text-center">
+                    <div class="title1 text-center ">
                         <h2>New Adventures</h2>
                     </div>
 
@@ -64,8 +74,9 @@
                 </div>
             </div>
         </div>
-        <!--Seccion 4-->
-        <div class="sec4 flex justify-center items-end">
+
+<!--Seccion 6-->
+        <div class="sec5 flex justify-center items-center">
             <div class="container_center ">
                 <div class=" seccionZonas felx justify-center items-center">
                 <div class="grid grid-cols-2 grid-rows-1 h-full w-full">
@@ -117,12 +128,15 @@
             </div>
             </div>
         </div>
-<!--Seccion 5-->
-        <div class="sec5 flex justify-center items-center">
-            <div class="contenido grid grid-cols-1 grid-rows-2 h-full w-full">
-                <div class="title3 flex justify-center items-center">
+        <div class="sec6">
+            <div class="title3 flex justify-center items-center">
                     <h2 class="orangeText">How we can help your journey</h2>
-                </div>
+            </div>
+        </div>
+
+<!--Seccion 7-->
+        <div class="sec7 flex justify-center items-center">
+            <div class="contenido">
                 <div class="points grid grid-cols-3 grid-rows-1">
                     <div class="destination flex justify-center items-center flex-col">
                         <div
@@ -153,9 +167,8 @@
             </div>
         </div>
 
-        <!--Seccion 5-->
-
-        <div class="sec6">
+<!--Seccion 8-->
+        <div class="sec8">
             <div class="contenido">
                 <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 cabos">
                     <div class="p-8 md:p-12 lg:px-16 lg:py-24">
@@ -180,6 +193,11 @@
                 </section>
             </div>
         </div>
+
+<!--Seccion 9-->
+        <div class="sec9 foot">
+
+        </div>
         
     </div>
 </template>
@@ -194,14 +212,24 @@ import galery from "../components/cards/imgGallery.vue"
 
 
 <style scoped>
-
+.secciones {
+    display: grid;
+    height: 450vh;
+    grid-template-rows: 1.8fr 0.1fr 0.1fr 1.6fr 0.5fr 1.7fr 0.3fr 1fr 0.1fr 1fr;
+    grid-auto-columns: 1fr;
+}
+.sec3{
+    display: grid;
+    grid-template-rows: 0.1fr 1.8fr;
+}
+.sec1{
+    height: 90vh;
+}
 .container_center{
     height: 80%;
 }
 
-.sec1{
-    height: 100vh;
-}
+
 .texto{
     color: white;
     font-weight: 1000;
@@ -274,18 +302,6 @@ import galery from "../components/cards/imgGallery.vue"
     height: 100%;
 }
 
-.sec5 {
-    height: 100vh;
-}
-
-
-
-.secciones {
-    display: grid;
-    height: 450vh;
-    grid-template-rows: 1.8fr 0.1fr 0.5fr 1.3fr 0.5fr 1.7fr 0.3fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-}
 
 .zonas {
     height: 60%;
@@ -300,15 +316,6 @@ import galery from "../components/cards/imgGallery.vue"
 .cont {
     height: 70%;
     width: 70%;
-}
-
-.sec2 {
-    border-radius: 50px 50px 0px 0px;
-}
-
-.sec3,
-.sec4,
-.sec5 {
 }
 
 .conflec {
