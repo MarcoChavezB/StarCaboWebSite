@@ -22,5 +22,20 @@ const props = defineProps({
     border-radius: 20px;
     color: white;
 }
+button{
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.btOrange {
+  background-color: #f0582b;
+  border: none;
+  transition: background-color 0.3s ease;
+}
 
+.btOrange:hover {
+  background-color: #ff6b2d;
+}
 </style>
