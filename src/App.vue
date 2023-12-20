@@ -45,7 +45,6 @@ watch(() => store.variableDeEstado, (value) => {
     grid-template-rows: 2.4fr 0.4fr ;
     gap: 0px 0px;
 }
-
 .back{
     display: grid; 
   grid-auto-columns: 1fr; 

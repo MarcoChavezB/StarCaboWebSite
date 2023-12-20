@@ -22,7 +22,11 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="border" style="border-radius: 20px 20px 0px 0px;"></div>
+=======
+
+>>>>>>> a41b94edc733a9623aaba7686904a745d14d7f0a
         <!--Seccion 2-->
         <div class="sec2 grid grid-cols-1 grid-rows-2 gap-0">
             <div class="contenedor flex justify-center items-center ">
@@ -34,15 +38,23 @@
                     <zona text="Puerto los Cabos" image="src\assets\Img\icons\water.png" />
                 </div>
             </div>
+<<<<<<< HEAD
         </div>
         <div class="sec3">
             <div class="text flex justify-center items-center">
+=======
+            <div class="bg-red text flex justify-center items-center">
+>>>>>>> a41b94edc733a9623aaba7686904a745d14d7f0a
                 <h2 class="orangeText text-center w-full">Recomended popular destinations</h2>
             </div>
         </div>
 
         <!--Seccion 3-->
+<<<<<<< HEAD
         <div class="sec4 grid grid-cols-1 grid-rows-2 gap-0">
+=======
+        <div class="sec3 bg-red-700 grid grid-cols-1 grid-rows-2 gap-0">
+>>>>>>> a41b94edc733a9623aaba7686904a745d14d7f0a
             <div class="contenedor flex justify-center items-center ">
                 <div class="zonas grid grid-cols-4 grid-rows-1 gap-10 ">
                     <hotelCard img="src/assets/Img/fotos/palm.webp" title="El arco" />
@@ -65,9 +77,14 @@
             </div>
         </div>
         <!--Seccion 4-->
+<<<<<<< HEAD
         <div class="sec4 flex justify-center items-end">
             <div class="container_center ">
                 <div class=" seccionZonas felx justify-center items-center">
+=======
+        <div class="sec4 grid grid-cols-1 grid-rows-3">
+            <div class="seccionZonas felx justify-center items-center">
+>>>>>>> a41b94edc733a9623aaba7686904a745d14d7f0a
                 <div class="grid grid-cols-2 grid-rows-1 h-full w-full">
                     <div class="imgzone flex justify-center items-center">
                         <div class="img "></div>
@@ -115,9 +132,15 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             </div>
         </div>
 <!--Seccion 5-->
+=======
+        </div>
+
+        <!--Seccion 5-->
+>>>>>>> a41b94edc733a9623aaba7686904a745d14d7f0a
         <div class="sec5 flex justify-center items-center">
             <div class="contenido grid grid-cols-1 grid-rows-2 h-full w-full">
                 <div class="title3 flex justify-center items-center">
@@ -155,7 +178,11 @@
 
         <!--Seccion 5-->
 
+<<<<<<< HEAD
         <div class="sec6">
+=======
+        <div class="sec5">
+>>>>>>> a41b94edc733a9623aaba7686904a745d14d7f0a
             <div class="contenido">
                 <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 cabos">
                     <div class="p-8 md:p-12 lg:px-16 lg:py-24">
