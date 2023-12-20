@@ -21,6 +21,7 @@ const props = defineProps({
     background-color: #F0582B;
     border-radius: 20px;
     color: white;
+    width: 10rem;
 }
 button{
   background: none;
@@ -28,6 +29,8 @@ button{
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  width: 100%;
+  width: 10rem;
 }
 .btOrange {
   background-color: #f0582b;
