@@ -1,16 +1,15 @@
 <template>
 <nav >
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
-  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <a href="#" class="logo flex items-center space-x-3 rtl:space-x-reverse">
       <img src="../../assets/Img/logo.png" class="h-10" alt="Flowbite Logo" />
       
       <router-link :to="{name: 'Principal'}">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Star Cabo</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">Star Cabo</span>
       </router-link>
-      
+    
     </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-
     <router-link :to="{name: 'GetService'}">
       <button type="button" class="bt text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center ">Get Services</button>
     </router-link>
@@ -46,33 +45,36 @@
 
 <style scoped>
 .bt {
-  background-color: #f0582b;
+  background-color: black;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .bt:hover {
-  background-color: #ff6b2d;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 a {
   transition: color 0.6s ease; 
+  color: black;
 }
 
 a:hover {
-  color: #ff6b2d;
+  color: black;
 }
 
 .check {
-  color: #ff6b2d;
+  color: black;
 }
 
 nav{
-  backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
   position: fixed;
   width: 100%;
   z-index: 1000;
+  border-radius: 0px 0px 20px 20px;
 }
 
 </style>

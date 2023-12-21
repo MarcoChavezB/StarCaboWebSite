@@ -6,7 +6,6 @@
 
     <div class="app" v-if="showCont" :class="{'ease-in':showCont}">
         <div class="back">
-
             <div class="bodyComp">
                 <router-view/>
             </div>  
@@ -52,7 +51,7 @@ watch(() => store.variableDeEstado, (value) => {
     grid-auto-columns: 1fr; 
     grid-template-rows: 0.2fr 2.4fr; 
     gap: 0px 0px; 
-    height: 100vh;
+    height: 110vh;
     background: url('../src/assets/Img/fotos/backgroundimg.webp') center center / cover no-repeat;;
 
 }

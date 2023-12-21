@@ -168,16 +168,22 @@
                 </div>
             </div>
         </div>
-
-<!--Seccion 8-->
+<!--Seccion 8-->        
         <div class="sec8 color-background">
+            <div class="contenido h-full w-full">
+                <ctaFoto/>
+            </div>
+        </div>
+
+<!--Seccion 9-->
+        <div class="sec9 color-background">
             <div class="contenido">
                 <cta/>
             </div>
         </div>
 
-<!--Seccion 9-->
-        <div class="sec9 foot color-background flex justify-center items-center border">
+<!--Seccion 10-->
+        <div class="sec10 foot color-background flex justify-center items-center border">
             <div class="fotercomp w-full">
                 <footerComp />
             </div>
@@ -193,6 +199,7 @@ import hotelCard from "../components/cards/hotelCard.vue"
 import cta from "../components/Principal/cta.vue"
 import footerComp from "../components/Principal/footer.vue"
 import HeaderComp from "../components/Principal/TopNavbar.vue"
+import ctaFoto from "../components/Principal/ctaFoto.vue"
 </script>
 
 
@@ -202,8 +209,8 @@ import HeaderComp from "../components/Principal/TopNavbar.vue"
 }
 .secciones {
     display: grid;
-    height: 450vh;
-    grid-template-rows: 0.4fr 1.8fr 0.1fr 0.1fr 1.6fr 0.5fr 1.7fr 0.3fr 1fr 0.1fr 1fr;
+    height: 500vh;
+    grid-template-rows: 0.4fr 1.8fr 0.1fr 0.1fr 1.6fr 0.5fr 2.3fr 0.3fr 1fr 2fr 0.1fr 1fr;
     grid-auto-columns: 1fr;
 }
 .sec3{
