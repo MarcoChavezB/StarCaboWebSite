@@ -1,12 +1,20 @@
 <template>
 <nav >
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
   <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="../../assets/Img/logo.png" class="h-10" alt="Flowbite Logo" />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Star Cabo</span>
-  </a>
+      
+      <router-link :to="{name: 'Principal'}">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Star Cabo</span>
+      </router-link>
+      
+    </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+    <router-link :to="{name: 'GetService'}">
       <button type="button" class="bt text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center ">Get Services</button>
+    </router-link>
+
       <button data-collapse-toggle="navbar-cta" type="button" class=" inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -58,4 +66,13 @@ a:hover {
 .check {
   color: #ff6b2d;
 }
+
+nav{
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
 </style>

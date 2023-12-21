@@ -1,6 +1,8 @@
 <template>
     <div class="secciones">
-
+        <div class="headerComp">
+                <HeaderComp />
+            </div>
 <!--Seccion 1-->
         <div class="sec1">
             <div class="principalView h-full w-full flex flex-col justify-center items-center">
@@ -26,10 +28,10 @@
         </div>
 
 <!--Seccion 2-->
-        <div class="borderr" style="border-radius: 20px 20px 0px 0px;"></div>
+        <div class="borderr color-background" style="border-radius: 20px 20px 0px 0px;"></div>
 
 <!--Seccion 3-->
-        <div class="sec2 grid grid-cols-1 grid-rows-2 gap-0 ">
+        <div class="sec2 grid grid-cols-1 grid-rows-2 gap-0 color-background">
             <div class="contenedor flex justify-center items-center ">
                 <div class="zonas  grid grid-cols-5 grid-rows-1 gap-0 ">
                     <div class="zon ">
@@ -44,7 +46,7 @@
         </div>
 
 <!--Seccion 4-->
-        <div class="sec3">
+        <div class="sec3 color-background">
             <div class="text flex justify-center items-center">
                 <h2 class="orangeText text-center w-full ">
                     Recomended popular destinations
@@ -61,7 +63,7 @@
         </div>
 
 <!--Seccion 5-->
-        <div class="sec4">
+        <div class="sec4 color-background">
             <div class="subj flex justify-center items-center h-full">
                 <div class="titles grid grid-cols-1 grid-rows-2 w-1/2">
                     <div class="title1 text-center ">
@@ -76,7 +78,7 @@
         </div>
 
 <!--Seccion 6-->
-        <div class="sec5 flex justify-center items-center">
+        <div class="sec5 flex justify-center items-center color-background">
             <div class="container_center ">
                 <div class=" seccionZonas felx justify-center items-center">
                 <div class="grid grid-cols-2 grid-rows-1 h-full w-full">
@@ -128,14 +130,14 @@
             </div>
             </div>
         </div>
-        <div class="sec6">
+        <div class="sec6 color-background">
             <div class="title3 flex justify-center items-center">
                     <h2 class="orangeText">How we can help your journey</h2>
             </div>
         </div>
 
 <!--Seccion 7-->
-        <div class="sec7 flex justify-center items-center">
+        <div class="sec7 flex justify-center items-center color-background">
             <div class="contenido">
                 <div class="points grid grid-cols-3 grid-rows-1">
                     <div class="destination flex justify-center items-center flex-col">
@@ -168,35 +170,17 @@
         </div>
 
 <!--Seccion 8-->
-        <div class="sec8">
+        <div class="sec8 color-background">
             <div class="contenido">
-                <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 cabos">
-                    <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-                        <div class="mx-auto max-w-xl flex flex-col gap-20 h-full ltr:sm:text-left rtl:sm:text-right">
-                            <h2 class="texto ">
-                                Let's explore the bauty of los Cabos
-                            </h2>
-                            <borderButton text="Get started"/>
-                        </div>
-                    </div>
-                    <div class="imagesSec5 grid grid-cols-3 grid-rows-1 gap-3">
-                        <div class="img1">
-                            <img src="../assets/Img/fotos/palm.webp" alt="">
-                        </div>
-                        <div class="img2">
-                            <img src="../assets/Img/fotos/palm.webp" alt="">
-                        </div>
-                        <div class="img3">
-                            <img src="../assets/Img/fotos/palm.webp" alt="">
-                        </div>
-                    </div>
-                </section>
+                <cta/>
             </div>
         </div>
 
 <!--Seccion 9-->
-        <div class="sec9 foot">
-
+        <div class="sec9 foot color-background flex justify-center items-center border">
+            <div class="fotercomp w-full">
+                <footerComp />
+            </div>
         </div>
         
     </div>
@@ -206,16 +190,20 @@
 import btOrange from "../components/controllers/btOrangeRight.vue"
 import zona from "../components/General/zonas.vue"
 import hotelCard from "../components/cards/hotelCard.vue"
-import borderButton from "../components/controllers/btOrange.vue"
-import galery from "../components/cards/imgGallery.vue"
+import cta from "../components/Principal/cta.vue"
+import footerComp from "../components/Principal/footer.vue"
+import HeaderComp from "../components/Principal/TopNavbar.vue"
 </script>
 
 
 <style scoped>
+.color-background{
+    background-color: #f5f4ed;
+}
 .secciones {
     display: grid;
     height: 450vh;
-    grid-template-rows: 1.8fr 0.1fr 0.1fr 1.6fr 0.5fr 1.7fr 0.3fr 1fr 0.1fr 1fr;
+    grid-template-rows: 0.4fr 1.8fr 0.1fr 0.1fr 1.6fr 0.5fr 1.7fr 0.3fr 1fr 0.1fr 1fr;
     grid-auto-columns: 1fr;
 }
 .sec3{
@@ -224,6 +212,7 @@ import galery from "../components/cards/imgGallery.vue"
 }
 .sec1{
     height: 90vh;
+
 }
 .container_center{
     height: 80%;
