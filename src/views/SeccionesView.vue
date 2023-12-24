@@ -29,12 +29,20 @@
     grid-template-rows: 0.2fr 2fr;
 }
 
-.icoBack {
+icoBack {
     font-size: 1rem;
     color: #7a7a77;
 }
 
 nav {
-    margin-left: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
+
+
 </style>
