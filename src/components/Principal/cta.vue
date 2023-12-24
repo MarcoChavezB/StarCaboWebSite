@@ -22,14 +22,17 @@
         <div class="img1 h-full w-full flex justify-center items-center">
           <img
           alt="Student"
-          src="https://images.unsplash.com/photo-1621274790572-7c32596bc67f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80"
+
+          
+          
+          src="../../assets/Img/fotos/palm.webp"
           class="sm:h-80 object-cover "
         />
         </div>
         <div class="img1 h-full w-full  flex justify-center items-center">
         <img
           alt="Student"
-          src="https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+          src="../../assets/Img/fotos/persona.webp"
           class=" sm:h-80 object-cover"
         />
       </div>
@@ -40,8 +43,27 @@
 </template>
 
 <script setup>
-import buttonComp from "../controllers/btOrange.vue"
+import axios from 'axios'
+import { onMounted, ref } from "vue";
+
+const hotelData = ref({
+  name: "",
+  location: "",
+  cellphone: "",
+  rating: 0,
+  website: "",
+  is_open: false,
+  image: ""
+});
+
+const getData = async () => {
+    const response = await axios.get('http://192.168.1.11:8000/info/hotel/ChIJ10lh6Pg1r4YRrvtcw6IZmu4');
+    hotelData.value = response.data;
+};
+
 </script>
+
+
 <style scoped>
 .img1{
   background-color: #575130;

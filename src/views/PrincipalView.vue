@@ -190,6 +190,12 @@
         </div>
         
     </div>
+
+
+<!--Right controller-->
+    <div class="rightMessaje">
+        <rightMessaje/>
+    </div>
 </template>
 
 <script setup>
@@ -200,6 +206,7 @@ import cta from "../components/Principal/cta.vue"
 import footerComp from "../components/Principal/footer.vue"
 import HeaderComp from "../components/Principal/TopNavbar.vue"
 import ctaFoto from "../components/Principal/ctaFoto.vue"
+import rightMessaje from "../components/Principal/rightMessaje.vue"
 </script>
 
 
@@ -216,6 +223,13 @@ import ctaFoto from "../components/Principal/ctaFoto.vue"
 .sec3{
     display: grid;
     grid-template-rows: 0.1fr 1.8fr;
+}
+.rightMessaje{
+    position: fixed;
+    right: 0;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 .sec1{
     height: 90vh;

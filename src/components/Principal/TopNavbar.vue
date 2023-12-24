@@ -27,7 +27,9 @@
         <a href="#" class="check block py-2 px-3 md:p-0 text-white  rounded md:bg-transparent" aria-current="page">Home</a>
       </li>
       <li>
+        <router-link :to="{name: 'destinations'}">
         <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Destinations</a>
+      </router-link>
       </li>
       <li>
         <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent  d:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
@@ -75,6 +77,7 @@ nav{
   width: 100%;
   z-index: 1000;
   border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 </style>
