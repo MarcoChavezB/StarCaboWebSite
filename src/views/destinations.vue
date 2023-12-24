@@ -2,7 +2,7 @@
     <div class="principalView">
         <div class="backgroundImage"></div>
         <div class="overlayContent">
-            <div class="searchComponents grid grid-rows-2 grid-cols-1">
+            <div class="searchComponents grid grid-rows-2 grid-cols-1 gap-10">
                 <div class="title text-white ">
                     <h1>Discover <br> your next destination</h1>
                     <p>You can find yout destination</p>
@@ -26,15 +26,86 @@
                     </div>
                     <buttonRed text="Search" ico="search" />
                 </div>
+
+                <div class="zones flex gap-5 flex-wrap">
+                    <zone text="Los cabos" />
+                    <zone text="Cabo san lucas" />
+                    <zone text="The corridor" />
+                    <zone text="San jose del cabo" />
+                    <zone text="Puerto los cabos" />
+                </div>
             </div>
             <div class="flex-body global-bg flex justify-center">
                 <div class="body">
-                    <div class="bodycard flex justify-center items-center">
-                        <div class="how flex justify-center items-center">
+                    <div class="bodycard grid">
+                        <div class="how flex  justify-center items-center">
                             <howCard />
                         </div>
+                        <div class="zonas grid grid-rows-4 gap-10">
+                            <div class="hotels flex flex-col">
+                                <div class="zona-text flex items-center justify-center">
+                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                </div>
+                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                            </div>
+                            </div>
+                            <div class="hotels flex flex-col">
+                                <div class="zona-text flex items-center justify-center">
+                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                </div>
+                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                            </div>
+                            </div>
+
+                            <div class="hotels flex flex-col">
+                                <div class="zona-text flex items-center justify-center">
+                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                </div>
+                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                            </div>
+                            </div>
+
+                            <div class="hotels flex flex-col">
+                                <div class="zona-text flex items-center justify-center">
+                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                </div>
+                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                                <hotelCard />
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -44,28 +115,39 @@
 <script setup>
 import buttonRed from '../components/controllers/buttonRed.vue';
 import howCard from '../components/cards/howCard.vue';
+import zone from '../components/cards/zone.vue';
+import hotelCard from '../components/cards/card.vue';
 </script>
   
 <style scoped>
+.zona-text{
+    height: 10rem;
+    margin-left: 4rem;
+    width: 89%;
+}
+.text-zona{
+    border-bottom: 1px solid;
+}
 .title {
     padding-bottom: 4rem;
 }
 
-.controlers {
+.controlers,
+.zones {
     width: 40%;
 }
 
 .body {
     width: 90%;
-    height:100vh;
-    border-radius: 20px;
+    height: auto;
 }
 
 .bodycard {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    grid-template-rows: auto 1fr;
 }
+
 .principalView {
     height: 100vh;
     width: 100%;
