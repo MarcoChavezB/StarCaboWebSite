@@ -1,14 +1,14 @@
 <template>
     <div class="hotelCard shadow-xl grid ">
-        <div class="image bg-blue-400">
+        <div class="image" :style="{ backgroundImage: `url('${img}')` }">
         </div>
         <div class="info grid grid-rows-2 bg-white">
             <div class="name">
-                <p class="h-full flex items-center">Name hotel</p>
+                <p class="h-full flex items-center">{{ name }}</p>
             </div>
             <div class="loc">
                 <div class="location flex items-center">
-                    <p class="subtext">Location</p>
+                    <p class="subtext">{{ location }}</p>
                 </div>
                 <div class="reserb w-full h-full flex justify-center items-center">
                     <button type="button" class="bt flex justify-center items-center gap-1 focus:outline-none text-white bg-red-700 hover:bg-red-800  rounded-lg me-2 mb-2">
@@ -23,8 +23,9 @@
 <script setup>
 import { defineProps } from 'vue'  
 const define = defineProps({
-    text: String,
-    image: String
+    name: String,
+    location: String,
+    img: String
 })
 </script>
 

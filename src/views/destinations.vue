@@ -38,71 +38,50 @@
             <div class="flex-body global-bg flex justify-center">
                 <div class="body">
                     <div class="bodycard grid">
-                        <div class="how flex  justify-center items-center">
-                            <howCard />
+                        <div class="how flex " style="margin-left: 4rem;">
+                            <div class="relative mt-6">
+                                <input type="email" placeholder="Search destine" autocomplete="email"
+                                    aria-label="Email address"
+                                    class="block w-full rounded-2xl border border-neutral-300 bg-transparent pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5" />
+                                <div class="absolute inset-y-1 right-1 flex justify-end">
+                                    <button type="submit" aria-label="Submit"
+                                        class="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800">
+                                        <span class="material-symbols-outlined ">search</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="zonas grid grid-rows-4 gap-10">
+                        <div class="zonas grid gap-10">
                             <div class="hotels flex flex-col">
                                 <div class="zona-text flex items-center justify-center">
-                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                    <p class="text-zona w-full flex justify-center">Diamante</p>
                                 </div>
-                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                            </div>
+                                <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
+                                    <div v-for="hotel in hotelsZone1" :key="hotel.id">
+                                        <hotelCard :name="hotel.name" :img="hotel.image" />
+                                    </div>
+                                </div>
                             </div>
                             <div class="hotels flex flex-col">
                                 <div class="zona-text flex items-center justify-center">
-                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                    <p class="text-zona w-full flex justify-center">Pacific beyond Los Arcos</p>
                                 </div>
-                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                            </div>
+                                <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
+                                    <div v-for="hotel in hotelsZone2" :key="hotel.id">
+                                        <hotelCard :name="hotel.name" :img="hotel.image" />
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="hotels flex flex-col">
                                 <div class="zona-text flex items-center justify-center">
-                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                    <p class="text-zona w-full flex justify-center">Cabo San Lucas</p>
                                 </div>
-                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                            </div>
-                            </div>
-
-                            <div class="hotels flex flex-col">
-                                <div class="zona-text flex items-center justify-center">
-                                    <p class="text-zona w-full flex justify-center">Zona Los cabos</p>
+                                <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
+                                    <div v-for="hotel in hotelsZone3" :key="hotel.id">
+                                        <hotelCard :name="hotel.name" :img="hotel.image" />
+                                    </div>
                                 </div>
-                            <div class="hotels zone-1 justify-center flex-wrap  flex zone1 gap-10">
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                                <hotelCard />
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -117,17 +96,46 @@ import buttonRed from '../components/controllers/buttonRed.vue';
 import howCard from '../components/cards/howCard.vue';
 import zone from '../components/cards/zone.vue';
 import hotelCard from '../components/cards/card.vue';
+import axios from 'axios';
+import { onMounted, ref } from 'vue';
+
+const hotelsZone1 = ref([])
+const hotelsZone2 = ref([])
+const hotelsZone3 = ref([])
+
+const getHotelsZone1 = async () => {
+    const { data } = await axios.get('http://127.0.0.1:8000/hotels/zone/1')
+    hotelsZone1.value = data
+}
+
+const getHotelsZone2 = async () => {
+    const { data } = await axios.get('http://127.0.0.1:8000/hotels/zone/2')
+    hotelsZone2.value = data
+}
+
+const getHotelsZone3 = async () => {
+    const { data } = await axios.get('http://127.0.0.1:8000/hotels/zone/3')
+    hotelsZone3.value = data
+}
+
+
+onMounted(() => {
+    getHotelsZone1();
+    getHotelsZone2();
+    getHotelsZone3();
+});
 </script>
   
 <style scoped>
-.zona-text{
+.zona-text {
     height: 10rem;
     margin-left: 4rem;
     width: 89%;
 }
-.text-zona{
+.text-zona {
     border-bottom: 1px solid;
 }
+
 .title {
     padding-bottom: 4rem;
 }
