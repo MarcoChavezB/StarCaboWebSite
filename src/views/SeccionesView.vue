@@ -24,7 +24,7 @@
 <style scoped>
 .destinations {
     background-color: white;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
     grid-template-rows: 0.2fr 2fr;
 }

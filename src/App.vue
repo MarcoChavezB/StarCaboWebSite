@@ -51,7 +51,7 @@ watch(() => store.variableDeEstado, (value) => {
     grid-auto-columns: 1fr; 
     grid-template-rows: 0.2fr 2.4fr; 
     gap: 0px 0px; 
-    height: 110vh;
+    height: 100vh;
     background: url('../src/assets/Img/fotos/backgroundimg.webp') center center / cover no-repeat;;
 
 }

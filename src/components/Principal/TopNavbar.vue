@@ -14,7 +14,7 @@
       <button type="button" class="bt text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center ">Get Services</button>
     </router-link>
 
-      <button data-collapse-toggle="navbar-cta" type="button" class=" inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+      <button  @click="toggle_mobile" data-collapse-toggle="navbar-cta"  type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false" >
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -42,10 +42,96 @@
   </div>
 </nav>
 
+<div class="nav-mobile flex flex-col items-end" v-show="show_mobile" :class="{ 'transicion-in': show_in, 'transicion-out': show_out }">
+    <ul class="nav-list flex flex-col items-end gap-5 p-3">
+      <li class="nav-item">
+        <a href="#" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Destinations</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Services</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">About Us</a>
+      </li>
+    </ul>
+  </div>
+
+
 </template>
 
+<script setup>
+import {ref} from 'vue'
+const show_mobile = ref(false)
+const toggle_animation = ref(false)
+const show_out = ref(false)
+const show_in = ref(false)
+
+const toggle_mobile = () => {
+  toggle_animation.value = !toggle_animation.value;
+
+  if (show_mobile.value) {
+    show_out.value = true;
+
+    setTimeout(() => {
+      show_out.value = false;
+      show_mobile.value = false;
+    }, 300);
+  } else {
+    show_mobile.value = true;
+
+    setTimeout(() => {
+      show_in.value = false;
+    }, 310);
+  }
+};
+
+</script>
 
 <style scoped>
+
+.nav-mobile{
+  position: fixed;
+  top: 4.6rem;
+  left: 0;
+  width: 100%;
+}
+.transicion-in{
+  animation: slideIn 0.3s ease-out;
+}
+
+.transicion-out{
+  animation: slideOut 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+
+.nav-list{
+  width: 26%;
+  border-radius: 20px 0px 0px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+
+}
 .bt {
   background-color: black;
   border: none;

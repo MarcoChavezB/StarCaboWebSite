@@ -23,3 +23,19 @@ export const useMiStore = defineStore({
       },
     },
   });
+
+
+
+
+export const hotelInformation = defineStore('hotelInformation', {
+  state: () => ({
+    var: ''
+  }),
+  actions: {
+    idStore(newValue) {
+      this.var = newValue; 
+    },
+  },
+});
+
+

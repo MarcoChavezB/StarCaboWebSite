@@ -16,7 +16,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.alert-text{
+  color: white;
+  border: 1px dashed red;
 
+}
 .orange-text{
   color: #ff6b2d;
 }
@@ -42,6 +46,16 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Catamaran', sans-serif;
+}
+.intra-layout{
+  height: 96%;
+  width: 96%;
+}
+.grid-row-7{
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+}
+h2{
+  font-size: 1.5rem;
 }
 
 p{

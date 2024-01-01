@@ -4,23 +4,21 @@
                 <HeaderComp />
             </div>
 <!--Seccion 1-->
-        <div class="sec1">
+        <div class="sec1 ">
             <div class="principalView h-full w-full flex flex-col justify-center items-center">
-                <div class="cont">
-                    <div class="title h-1/3">
+                <div class="cont gap-20 flex flex-col justify-center">
+                    <div class="title ">
                         <h1 class="text-white text-center">find the next place to explore
                             the beauty of the world
                         </h1>
                     </div>
-                    <div class="subtilt h-1/3">
+                    <div class="subtilt">
                         <h4 class="text-center">Live the best experience in star cabo
                             services</h4>
                     </div>
-                    <div class="buttons h-1/3">
-                        <div class="w flex justify-center items-center">
-                            <div class="conflec flex justify-center items-center">
+                    <div class="buttons">
+                        <div class="w-full  flex justify-center items-center">
                                 <btOrange text="Let's explore" />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,6 +133,7 @@
                     <h2 class="orangeText">How we can help your journey</h2>
             </div>
         </div>
+        
 
 <!--Seccion 7-->
         <div class="sec7 flex justify-center items-center color-background">

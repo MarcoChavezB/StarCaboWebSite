@@ -13,7 +13,6 @@
           </p>
 
           <div class="mt-4 md:mt-8 flex">
-            <buttonComp text="Get Services"/>
           </div>
         </div>
       </div>

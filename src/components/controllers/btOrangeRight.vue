@@ -23,6 +23,7 @@ const props = defineProps({
     color: white;
     width: 10rem;
 }
+
 button{
   background: none;
   border: none;
@@ -31,6 +32,9 @@ button{
   outline: inherit;
   width: 100%;
   width: 10rem;
+}
+.cont{
+  max-width: 10.2rem;
 }
 .btOrange {
   background-color: #f0582b;
