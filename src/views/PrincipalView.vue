@@ -27,22 +27,18 @@
 
 <!--Seccion 2-->
         <div class="borderr color-background" style="border-radius: 20px 20px 0px 0px;"></div>
-
 <!--Seccion 3-->
-        <div class="sec2 grid grid-cols-1 grid-rows-2 gap-0 color-background">
-            <div class="contenedor flex justify-center items-center ">
-                <div class="zonas  grid grid-cols-5 grid-rows-1 gap-0 ">
-                    <div class="zon ">
-                        <zona text="Diamante" image="src\assets\Img\icons\diamond.png" />
-                    </div>
+        <div class="sec2 flex justify-center items-center color-background p-20">
+            <div class="contenedor flex justify-center items-center h-full contenedor-mobil">
+                <div class="zonas grid grid-cols-5 grid-rows-1 gap-20 zona-mobil">
+                    <zona text="Diamante" image="src\assets\Img\icons\diamond.png" />
                     <zona text="Cabo San Lucas" image="src\assets\Img\icons\beach.png" />
                     <zona text="The corridor" image="src\assets\Img\icons\bridge.png" />
                     <zona text="San Jose del Cabo" image="src\assets\Img\icons\desert.png" />
-                    <zona text="Puerto los Cabos" image="src\assets\Img\icons\water.png" />
+                    <zona  text="Puerto los Cabos" image="src\assets\Img\icons\water.png" />
                 </div>
             </div>
         </div>
-
 <!--Seccion 4-->
         <div class="sec3 color-background">
             <div class="text flex justify-center items-center">
@@ -50,14 +46,15 @@
                     Recomended popular destinations
                 </h2>
             </div>
-            <div class="contenedor flex justify-center items-center ">
-                <div class="zonas grid grid-cols-4 grid-rows-1 gap-10 ">
-                    <hotelCard img="src/assets/Img/fotos/palm.webp" title="El arco" />
-                    <hotelCard img="src/assets/Img/fotos/cabos.webp" title="El arco" />
-                    <hotelCard img="src/assets/Img/fotos/persona.webp" title="El arco" />
-                    <hotelCard img="src/assets/Img/fotos/backgroundimg.webp" title="El arco" />
-                </div>
+            <div class="contenedor flex justify-center items-center">
+            <div class="zonas grid grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1 gap-10">
+                <hotelCard img="src/assets/Img/fotos/palm.webp" title="El arco" />
+                <hotelCard img="src/assets/Img/fotos/cabos.webp" title="El arco" />
+                <hotelCard img="src/assets/Img/fotos/persona.webp" title="El arco" />
+                <hotelCard img="src/assets/Img/fotos/backgroundimg.webp" title="El arco" />
             </div>
+            </div>
+
         </div>
 
 <!--Seccion 5-->
@@ -79,7 +76,7 @@
         <div class="sec5 flex justify-center items-center color-background">
             <div class="container_center ">
                 <div class=" seccionZonas felx justify-center items-center">
-                <div class="grid grid-cols-2 grid-rows-1 h-full w-full">
+                <div class="grid grid-cols-2 grid-rows-1 h-full w-full tk-grid">
                     <div class="imgzone flex justify-center items-center">
                         <div class="img "></div>
                         <div class="titleImg flex justify-center items-center text-center">
@@ -216,7 +213,7 @@ import rightMessaje from "../components/Principal/rightMessaje.vue"
 .secciones {
     display: grid;
     height: 500vh;
-    grid-template-rows: 0.4fr 1.8fr 0.1fr 0.1fr 1.6fr 0.5fr 2.3fr 0.3fr 1fr 2fr 0.1fr 1fr;
+    grid-template-rows: 0.4fr 1.8fr 0.2fr 0.4fr 1.6fr 0.5fr 2.3fr 0.3fr 1fr 2fr 0.1fr 1fr;
     grid-auto-columns: 1fr;
 }
 .sec3{
@@ -238,20 +235,6 @@ import rightMessaje from "../components/Principal/rightMessaje.vue"
     height: 80%;
 }
 
-
-.texto{
-    color: white;
-    font-weight: 1000;
-    font-size: 2.5rem;
-}
-.img1, .img2, .img3{
-    display: flex;
-    justify-content: center;
-}
-
-.imagesSec5{
-    margin-right: 20px;
-}
 .tit {
     margin-top: 30px;
 }
@@ -327,7 +310,34 @@ import rightMessaje from "../components/Principal/rightMessaje.vue"
     width: 70%;
 }
 
-.conflec {
-    width: 25%;
+/* MOBILE   */
 
-}</style>
+@media screen and (max-width: 767px) {
+  .sec2{
+    padding: 0;
+  }
+
+  .contenedor-mobil{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .zona-mobil {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+    padding-bottom: 10rem;
+  }
+
+  .secciones{
+    grid-template-rows: 0.4fr 1.8fr 0.2fr 0.4fr 3fr 0.5fr 2.3fr 0.3fr 1fr 2fr 0.1fr 1fr;
+  }
+
+  .titles{
+    width: 90%;
+  }
+
+  
+
+}
+</style>

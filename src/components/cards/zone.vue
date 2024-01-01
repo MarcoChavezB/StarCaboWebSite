@@ -4,7 +4,6 @@
 
 
 <script setup>
-import { defineProps } from 'vue';
 const define = defineProps({
     text: String,
 })

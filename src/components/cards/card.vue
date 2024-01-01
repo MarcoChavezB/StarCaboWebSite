@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'  
 const define = defineProps({
     name: String,
     location: String,

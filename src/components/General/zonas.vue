@@ -11,7 +11,6 @@
     </div>
 </template>
 <script setup>
-import { defineProps } from 'vue'
 const props = defineProps({
     text: String,
     image: String
@@ -29,7 +28,9 @@ const props = defineProps({
     gap: 0px 0px;
 
 }
-
+.text{
+    text-align: center;
+}
 span {
     font-size: 3rem;
 }
