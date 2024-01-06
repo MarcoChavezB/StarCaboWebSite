@@ -23,11 +23,11 @@
         <div class="sec2 flex justify-center items-center color-background p-20">
             <div class="contenedor flex justify-center items-center h-full contenedor-mobil">
                 <div class="zonas grid grid-cols-5 grid-rows-1 gap-20 zona-mobil">
-                    <zona text="Diamante" image="src\assets\Img\icons\diamond.png" />
-                    <zona text="Cabo San Lucas" image="src\assets\Img\icons\beach.png" />
-                    <zona text="The corridor" image="src\assets\Img\icons\bridge.png" />
-                    <zona text="San Jose del Cabo" image="src\assets\Img\icons\desert.png" />
-                    <zona  text="Puerto los Cabos" image="src\assets\Img\icons\water.png" />
+                    <zona text="Diamante" image="../src/assets/Img/icons/diamond.png" />
+                    <zona text="Cabo San Lucas" image="../src/assets/Img/icons/beach.png" />
+                    <zona text="The corridor" image="../src/assets/Img/icons/bridge.png" />
+                    <zona text="San Jose del Cabo" image="../src/assets/Img/icons/desert.png" />
+                    <zona  text="Puerto los Cabos" image="../src/assets/Img/icons/water.png" />
                 </div>
             </div>
         </div>
