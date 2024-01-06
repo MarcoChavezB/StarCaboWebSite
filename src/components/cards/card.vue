@@ -65,4 +65,20 @@ p{
 }
 
 
+@media screen and (max-width: 767px) {
+    .hotelCard {
+        height: 10rem;
+        width: 11rem;
+    }
+    .info{
+        grid-template-rows: 1fr;
+    }
+
+    .loc{
+        display: none;
+    }
+
+  }
+
+
 </style>

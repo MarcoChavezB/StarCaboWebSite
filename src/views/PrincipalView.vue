@@ -6,20 +6,12 @@
 <!--Seccion 1-->
         <div class="sec1 ">
             <div class="principalView h-full w-full flex flex-col justify-center items-center">
-                <div class="cont gap-20 flex flex-col justify-center">
-                    <div class="title ">
+                <div class="cont grid grid-rows-2">
+                    <div class="title flex flex-col justify-center items-center">
+                        <img style="height: 80%;" src="../assets/Img/logo.png">
                         <h1 class="text-white text-center">find the next place to explore
                             the beauty of the world
                         </h1>
-                    </div>
-                    <div class="subtilt">
-                        <h4 class="text-center">Live the best experience in star cabo
-                            services</h4>
-                    </div>
-                    <div class="buttons">
-                        <div class="w-full  flex justify-center items-center">
-                                <btOrange text="Let's explore" />
-                        </div>
                     </div>
                 </div>
             </div>
@@ -40,22 +32,7 @@
             </div>
         </div>
 <!--Seccion 4-->
-        <div class="sec3 color-background">
-            <div class="text flex justify-center items-center">
-                <h2 class="orangeText text-center w-full ">
-                    Recomended popular destinations
-                </h2>
-            </div>
-            <div class="contenedor flex justify-center items-center">
-            <div class="zonas grid grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1 gap-10">
-                <hotelCard img="src/assets/Img/fotos/palm.webp" title="El arco" />
-                <hotelCard img="src/assets/Img/fotos/cabos.webp" title="El arco" />
-                <hotelCard img="src/assets/Img/fotos/persona.webp" title="El arco" />
-                <hotelCard img="src/assets/Img/fotos/backgroundimg.webp" title="El arco" />
-            </div>
-            </div>
-
-        </div>
+        
 
 <!--Seccion 5-->
         <div class="sec4 color-background">
@@ -125,6 +102,23 @@
             </div>
             </div>
         </div>
+
+        <div class="cardsZone gap-20 grid global-bg grid-rows-4">
+            <div class="card1 flex justify-center items-center" >
+                <cardLeft ico="travel" title="Airport - Hotel" img="../src/assets/Img/fotos/toAirport.jpg"/>
+            </div>
+            <div class="card2 flex justify-center items-center">
+                <cardRigth  ico="travel" title="Dinners" img="../src/assets/Img/fotos/toDinner.jpg"/>
+            </div>
+            <div class="card3 flex justify-center items-center">
+                <cardLeft  ico="travel" title="Activities" img="../src/assets/Img/fotos/toHotel.jpg"/>
+            </div>
+            <div class="card4 flex justify-center items-center">
+                <cardRigth  ico="travel" title="Hotel - Airpot" img="../src/assets/Img/fotos/toHotel.jpg"/>
+            </div>
+        </div>
+
+
         <div class="sec6 color-background">
             <div class="title3 flex justify-center items-center">
                     <h2 class="orangeText">How we can help your journey</h2>
@@ -165,14 +159,14 @@
             </div>
         </div>
 <!--Seccion 8-->        
-        <div class="sec8 color-background">
+        <div class="sec8 global-bg">
             <div class="contenido h-full w-full">
                 <ctaFoto/>
             </div>
         </div>
 
 <!--Seccion 9-->
-        <div class="sec9 color-background">
+        <div class="sec9 color-background ">
             <div class="contenido">
                 <cta/>
             </div>
@@ -195,9 +189,9 @@
 </template>
 
 <script setup>
-import btOrange from "../components/controllers/btOrangeRight.vue"
+import cardLeft from "../components/Principal/cardleft.vue"
+import cardRigth from '../components/Principal/cardRight.vue'
 import zona from "../components/General/zonas.vue"
-import hotelCard from "../components/cards/hotelCard.vue"
 import cta from "../components/Principal/cta.vue"
 import footerComp from "../components/Principal/footer.vue"
 import HeaderComp from "../components/Principal/TopNavbar.vue"
@@ -212,13 +206,9 @@ import rightMessaje from "../components/Principal/rightMessaje.vue"
 }
 .secciones {
     display: grid;
-    height: 500vh;
-    grid-template-rows: 0.4fr 1.8fr 0.2fr 0.4fr 1.6fr 0.5fr 2.3fr 0.3fr 1fr 2fr 0.1fr 1fr;
+    height: 700vh;
+    grid-template-rows: 0.1fr 1.8fr 0.1fr 0.3fr 0.2fr 1fr 4.3fr 0.3fr 0.5fr 2fr 0.1fr 1fr;
     grid-auto-columns: 1fr;
-}
-.sec3{
-    display: grid;
-    grid-template-rows: 0.1fr 1.8fr;
 }
 .rightMessaje{
     position: fixed;
@@ -316,28 +306,52 @@ import rightMessaje from "../components/Principal/rightMessaje.vue"
   .sec2{
     padding: 0;
   }
-
   .contenedor-mobil{
     justify-content: center;
     align-items: center;
   }
-
   .zona-mobil {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 0;
     padding-bottom: 10rem;
   }
-
   .secciones{
     grid-template-rows: 0.4fr 1.8fr 0.2fr 0.4fr 3fr 0.5fr 2.3fr 0.3fr 1fr 2fr 0.1fr 1fr;
   }
-
   .titles{
     width: 90%;
   }
-
-  
-
+  .title3{
+    text-align: center;
+  }
+  .points .subtext{
+    display: none;
+  }
+  .points{
+    text-align: center;
+  }
+  .sec8{
+    height: 73vh;
+  }
+  .tk-grid{
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .textzone{
+    text-align: center;
+  }
+  .airport, .activities, .dinners, .hotel{
+    justify-content: center;
+  }
+  .titleImg{
+    font-size: 0.8rem;
+  }
+  .zoneIte{
+    width: 97%;
+    }
+.rightMessaje{
+    display: none;
+}
 }
 </style>

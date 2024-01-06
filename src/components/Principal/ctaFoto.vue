@@ -23,9 +23,9 @@
             </div>
             <div class="text flex justify-center items-center">
                 <div class="tite contenido h-full w-full"   
-                     style="height: 50%; margin-right: 20px; display: grid; grid-template-rows: 0.5fr 2fr;">
+                     style=" margin-right: 20px; display: grid; grid-template-rows: 0.5fr 2fr;">
                     <div style="border-bottom: 1px solid; height: 5rem;">
-                        <h2 style="font-size: 2rem;">You can imagine</h2>
+                        <h2 style="font-size: 2rem;">We are professionals</h2>
                     </div>
                     <div class="contenidoText flex justify-center items-center">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nemo dolorem molestias iste
@@ -48,5 +48,22 @@
     width: 100%;
     height: 100%;
     object-fit: cover; 
+}
+
+.contenido{
+    height: 50%;
+}
+
+@media screen and (max-width: 767px) {
+    .gridconte{
+        grid-template-columns: 1fr;
+    }
+    .contenido{
+        height: 100%;
+        margin-right: 0;
+    }
+    .text {
+        text-align: center;
+    }
 }
 </style>

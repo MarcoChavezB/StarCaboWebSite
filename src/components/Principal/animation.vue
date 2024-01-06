@@ -24,15 +24,19 @@
             </div>
             <div class="imgages">
                <div class="cont h-full grid grid-cols-3 gap-2">
-                <div class="img">
-                    <img src="../../assets/Img/fotos/cabos.webp" alt="">
-                </div>
-                <div class="img">
-                    <img src="../../assets/Img/fotos/persona.webp" alt="">
-                </div>
-                <div class="img">
-                    <img src="../../assets/Img/fotos/palm.webp" alt="">
-                </div>
+                  <div class="img">
+                    <img src="../../assets/Img/fotos/fotoReal2.jpg" alt="">
+                  </div>
+                  <div class="img bg-black">
+                    <div class="conteni">
+                      <div class="intra-layo">
+                        <img src="../../assets/Img/logoBlack.jpeg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="img">
+                      <img src="../../assets/Img/fotos/carro.png" alt="">
+                  </div>
                </div>
             </div>
         </section>
@@ -149,5 +153,14 @@ img{
   to {
     opacity: 0;
   }
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+.cont{
+  width: 107%;  
+}
 }
 </style>

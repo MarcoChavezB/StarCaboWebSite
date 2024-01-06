@@ -27,10 +27,17 @@
 .orange {
   color: #f0582b;
 }
+
+.orange-back {
+  background-color: #ff792d;
+  color: white;
+}
 .tit {
   margin-top: 30px;
 }
-
+.linked{
+  color: #4582b7;
+}
 .subtext {
   font-size: 1rem;
   opacity: 0.5;

@@ -15,8 +15,6 @@
 </template>
 
 <script setup>
-
-import HeaderComp from "./components/Principal/TopNavbar.vue";
 import animation from "./components/Principal/animation.vue";
 import {ref, watch} from 'vue'
 import { useMiStore } from './stores/cunter';
@@ -49,8 +47,7 @@ watch(() => store.variableDeEstado, (value) => {
     grid-template-rows: 0.2fr 2.4fr; 
     gap: 0px 0px; 
     height: 100vh;
-    background: url('../src/assets/Img/fotos/backgroundimg.webp') center center / cover no-repeat;;
-
+    background: url('../src/assets/Img/fotos/carroCasa.jpeg') center center / cover no-repeat;
 }
 
 .ease-in{
