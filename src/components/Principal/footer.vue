@@ -32,7 +32,26 @@ dinners⭐
           <a class="text-gray-700 transition hover:text-gray-700/75"> Destiness </a>
         </router-link>
       </li>
+    </ul>
+    <ul class="flex justify-center items-center gap-20 mt-10">
+      <li>
+        <div class="flex gap-5 number">
+      <span class="material-symbols-outlined">
+call
+</span>
+    <p>624 122 6386</p>
+    </div>
+      </li>
 
+      <li>
+        <div class="flex gap-5 number">
+      <span class="material-symbols-outlined">
+mail
+</span>
+    <p>Starcabo21@gmail.com</p>
+    </div>
+      </li>
+      
     </ul>
 
     <ul class="mt-12 flex justify-center gap-6 md:gap-8">

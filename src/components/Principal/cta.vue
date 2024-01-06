@@ -21,17 +21,14 @@
         <div class="img1 h-full w-full flex justify-center items-center">
           <img
           alt="Student"
-
-          
-          
-          src="../../assets/Img/fotos/palm.webp"
+          src="../../assets/Img/fotos/preview.jpeg"
           class="sm:h-80 object-cover "
         />
         </div>
         <div class="img1 h-full w-full  flex justify-center items-center">
         <img
           alt="Student"
-          src="../../assets/Img/fotos/persona.webp"
+          src="../../assets/Img/fotos/carro5.jpeg"
           class=" sm:h-80 object-cover"
         />
       </div>

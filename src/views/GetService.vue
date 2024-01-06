@@ -381,20 +381,20 @@ option {
                                     <div class="flex intra-layout flex-col ml-4 gap-3">
                                         <div class="row2">
                                             <p class="subtext">Start: </p>
-                                            <p>{{ arrive_information.star_location }}</p>
+                                            <p>{{ second_arrive_information.star_location }}</p>
                                         </div>
                                         <div class="row2">
                                             <p class="subtext">End: </p>
-                                            <p>{{ arrive_information.end_location }}</p>
+                                            <p>{{ second_arrive_information.end_location }}</p>
                                         </div>
                                         <div class="flight gap-2 flex flex-col" v-if="show_data_travel2">
                                             <div class="row2">
                                                 <p class="subtext">Flight number: </p>
-                                                <p>{{ arrive_information.flight_number }}</p>
+                                                <p>{{ second_arrive_information.flight_number }}</p>
                                             </div>
                                             <div class="row2">
                                                 <p class="subtext">Airline: </p>
-                                                <p>{{ arrive_information.airline }}</p>
+                                                <p>{{ second_arrive_information.airline }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -470,10 +470,69 @@ option {
   </div>
 </div>
 
+
+<div class="grat-message text-center bg-white shadow-lg flex justify-center items-center"
+    v-if="showGrats"
+     :class="{ 'animation-pop-in': showMessage, 'animation-pop-out':showPopAnimation}">
+     <div class="cookie-card flex justify-center items-center flex-col">
+    <h1 class="title">⭐ Star Cabo Services</h1>
+    <h2 class="w-full text-center">Tanks {{name}}!</h2>
+    <p class="description">Thank you for choosing Star Cabo Transportation Services for your upcoming journey! 🌟 We're thrilled to have you on board.    
+    </p>
+    <div class="w-full flex justify-between mt-10">
+        <h2 style="  font-weight: 600;
+  color: rgb(31 41 55);" class="">Transporting Stars 🌟</h2>
+        <button @click="showGrats = false" class="text-white">Go it</button>
+    </div>
+
+</div>
+</div>
+
 </template>
 
 
 <style scoped>
+
+.cookie-card {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+}
+
+.title {
+  font-weight: 600;
+  color: rgb(31 41 55);
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 90%;
+  color: rgb(75 85 99);
+}
+
+.description a {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246);
+}
+
+.description a:hover {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.grat-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
 .modal-message {
     position: absolute;
     bottom: 3rem;
@@ -511,6 +570,44 @@ option {
     100% {
         opacity: 0; 
     }
+}
+
+.animation-pop-in{
+    animation: animation-pop-in 1s ease-in-out;
+}
+
+.animation-pop-out{
+    animation: animation-pop-out 1s ease-in-out;
+}
+
+
+
+@keyframes animation-pop-in{
+    0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.4);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  70%{
+    transform: scale(1.2);
+  }
+  80%{
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes animation-pop-out{
+    
 }
 
 .ca {
@@ -552,6 +649,8 @@ const idHotelStore = hotelInformation();
 const showModal = ref(false);
 const showMessage = ref(false)
 const showOutAnimation = ref(false);
+const showGrats = ref(false)
+const showPopAnimation = ref(false)
 const ico = ref('close')
 // one way
 
@@ -653,9 +752,11 @@ const showMessageAndReturnFalse = (message) => {
     showMessage.value = true;
     setTimeout(() => {
         showOutAnimation.value = true;
+        showPopAnimation.value = true;
         setTimeout(() => {
             showMessage.value = false;
             showOutAnimation.value = false;
+            showPopAnimation.value = false;
         }, 1000);
     }, 3000);
     return false;
@@ -751,9 +852,7 @@ const SendEmail = async () => {
         };
 
         await axios.post('http://127.0.0.1:8000/send-email', data);
-        ico.value = 'check'
-        showMessageAndReturnFalse('Reservacion hecha con exito')
-
+        showGrats.value = true
     } catch (error) {
         console.error('Error al enviar el correo:', error);
     }

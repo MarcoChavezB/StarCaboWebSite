@@ -9,7 +9,13 @@
       </router-link>
     
     </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse justify-center items-center md:gap-10">
+    <div class="flex gap-5 number">
+      <span class="material-symbols-outlined">
+call
+</span>
+    <p>624 122 6386</p>
+    </div>
     <router-link :to="{name: 'GetService'}">
       <button type="button" class="bt text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center ">Get Services</button>
     </router-link>
@@ -169,9 +175,10 @@ nav{
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
-@media screen and (min-width: 767px) {
-  .nav-mobile{
+@media screen and (max-width: 767px) {
+  .number{
     display: none;
-  } 
+  }
+
 }
 </style>

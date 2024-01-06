@@ -6,13 +6,12 @@
         <!--Seccion 1-->
         <div class="sec1 ">
             <div class="principalView h-full w-full flex flex-col justify-center items-center">
-                <div class="cont grid grid-rows-2">
+                <div class="cont grid grid-rows-2 ">
                     <div class="title flex flex-col justify-center items-center">
                         <img style="height: 80%;" src="../assets/Img/logo.png">
-                        <h1 class="text-white text-center">find the next place to explore
-                            the beauty of the world
-                        </h1>
                     </div>
+                    <h1 class="text-white text-center">Welcome to Star Cabo Transportation Services
+                        </h1>
                 </div>
             </div>
         </div>
@@ -121,12 +120,9 @@
         <div class="sec5 flex justify-center items-center color-background">
             <div class="container_center ">
                 <div class=" seccionZonas felx justify-center items-center">
-                    <div class="grid grid-cols-2 grid-rows-1 h-full w-full tk-grid">
-                        <div class="imgzone flex justify-center items-center">
+                    <div class="grid gap-20 grid-cols-2 grid-rows-1 h-full w-full tk-grid">
+                        <div class="imgzone flex ">
                             <div class="img "></div>
-                            <div class="titleImg flex justify-center items-center text-center">
-                                Exceptional adventures every time, we bring you to them
-                            </div>
                         </div>
                         <div class="flex justify-center h-full zoneIte ">
                             <div class="textzone grid grid-rows-4 grid-cols-1">
@@ -174,17 +170,84 @@
 
         <div class="cardsZone gap-20 grid global-bg grid-rows-4">
             <div class="card1 flex justify-center items-center">
-                <cardLeft ico="travel" title="Airport - Hotel" img="src/assets/Img/fotos/toAirport.jpg" />
+                <div class="card-left h-full w-4/5 flex justify-center items-center ">
+                    <div class="intra-layout contenedor-left shadow bg-white">
+                        <div :style="{ backgroundImage: 'url(' + airportImage  + ')' }" class="img-left bg-black"></div>
+                        <div class="texto">
+                            <div class="ico flex justify-end mr-10 items-center">
+                                <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
+                                    travel
+                                </span>
+                            </div>
+                            <div class="title-left h-full flex-col gap-5 flex justify-center items-center text-center">
+                                <h1 class="orange-text font-bold">Airport - Hotel</h1>
+                                <p class="subtext w-4/5"> natus sint maxime error corporis aut eius eos maiores commodi ad harum ratione suscipit soluta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="card2 flex justify-center items-center">
-                <cardRigth ico="travel" title="Dinners" :img="dinnerImage" />
-            </div>
+                <div class="card-left h-full w-4/5 flex justify-center items-center ">
+                        <div class="intra-layout contenedor-right shadow bg-white">
+                            <div class="texto-right">
+                                <div class="ico-right flex justify-start ml-10 items-center">
+                                    <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
+                                        restaurant_menu
+                                    </span>
+                                </div>
+                                <div class="title-right flex-col text-center h-full flex justify-center items-center">
+                                    <h1 class="orange-text font-bold">Dinners</h1>
+                                    <p class="subtext w-4/5"> 
+                                        Dine in style. We take care of the transport, so you can enjoy your dinners worry-free                                    </p>
+
+                                </div>
+                            </div>
+                            <div :style="{ backgroundImage: 'url(' + dinnerImage + ')' }" class="img-right bg-black"></div>
+                        </div>
+                    </div>            
+                </div>
             <div class="card3 flex justify-center items-center">
-                <cardLeft ico="travel" title="Activities" img="src/assets/Img/fotos/toActivitie.jpg" />
+                <div class="card-left h-full w-4/5 flex justify-center items-center ">
+                    <div class="intra-layout contenedor-left shadow bg-white">
+                        <div :style="{ backgroundImage: 'url(' + hotelImage  + ')' }" class="img-left bg-black"></div>
+                        <div class="texto">
+                            <div class="ico flex justify-end mr-10 items-center">
+                                <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
+                                    apartment
+                                </span>
+                            </div>
+                            <div class="title-left h-full flex-col gap-5 flex justify-center items-center text-center">
+                                <h1 class="orange-text font-bold">Hotel - Airport</h1>
+                                <p class="subtext w-4/5"> 
+                                    Arrive at your hotel effortlessly. Our Airport - Hotel service ensures efficient and comfortable transfers
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="card4 flex justify-center items-center">
-                <cardRigth ico="travel" title="Hotel - Airpot" img="src/assets/Img/fotos/toHotel.jpg" />
-            </div>
+                <div class="card-left h-full w-4/5 flex justify-center items-center ">
+                        <div class="intra-layout contenedor-right shadow bg-white">
+                            <div class="texto-right">
+                                <div class="ico-right flex justify-start ml-10 items-center">
+                                    <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
+                                        sports_gymnastics
+                                    </span>
+                                </div>
+                                <div class="title-right flex-col text-center h-full flex justify-center items-center">
+                                    <h1 class="orange-text font-bold">Activities</h1>
+                                    <p class="subtext w-4/5"> 
+                                        Embark on new adventures with our Activities service. Every moment is an exploration
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div :style="{ backgroundImage: 'url(' + activitiesImage + ')' }" class="img-right bg-black"></div>
+                        </div>
+                    </div> 
+                            </div>
         </div>
 
 
@@ -258,6 +321,7 @@
 </template>
 
 <script setup>
+import {ref} from 'vue'
 import cardLeft from "../components/Principal/cardleft.vue"
 import cardRigth from '../components/Principal/cardRight.vue'
 import zona from "../components/General/zonas.vue"
@@ -267,11 +331,96 @@ import HeaderComp from "../components/Principal/TopNavbar.vue"
 import ctaFoto from "../components/Principal/ctaFoto.vue"
 import rightMessaje from "../components/Principal/rightMessaje.vue"
 
-const dinnerImage = import.meta.env.BASE_URL + '/StarCaboWebSite/src/assets/Img/fotos/toDinner.jpg';
+import dinnerImage from "../assets/Img/fotos/toDinner.jpg";
+import hotelImage from "../assets/Img/fotos/toHotel.jpg";
+import activitiesImage from "../assets/Img/fotos/toActivitie.jpg";
+import airportImage from "../assets/Img/fotos/toAirport.jpg";
+
+const hotelImg = ref(hotelImage)
+const dinnerImg = ref(dinnerImage)
+const activitiesImg = ref(activitiesImage)
+const airportImg = ref(airportImage)
 </script>
 
 
 <style scoped>
+.img-left , .contenedor-left{
+        border-radius: 20px;
+    }
+    .img-left {
+        background: center center / cover no-repeat;
+    }
+    .contenedor-left{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .texto{
+        display: grid;
+        grid-template-rows: 1fr 4fr;
+    }
+
+    @media screen and (max-width: 767px) {
+        
+        .contenedor-left{
+            grid-template-columns: 1fr;
+        }
+        .img{ 
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            position: relative;
+            height: 300px;   
+        }
+        .texto{
+            grid-template-rows: 1fr 1fr;
+            margin-top: 30px;
+
+        }
+        .title-left p{
+            display: none;
+        }
+        .ico{
+            display: none;
+        }
+    }
+
+    .img-right, .contenedor-right {
+        border-radius: 20px;
+    }
+
+    .img-right {
+        background: center center / cover no-repeat;
+    }
+
+    .contenedor-right {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .texto-right {
+        display: grid;
+        grid-template-rows: 1fr 4fr;
+    }
+
+    @media screen and (max-width: 767px) {
+        .ico-right, p{
+            display: none;
+        }
+        .img-right {
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            height: 300px;   
+            order: -1; 
+        }
+        .contenedor-right{
+            grid-template-columns: 1fr;
+        }
+        .title-right{
+            margin-top: 30px;
+        }
+        .texto-right{
+            grid-template-rows: 1fr 3fr;
+        }
+    
+    }
+
 .color-background {
     background-color: #f5f4ed;
 }
@@ -341,18 +490,9 @@ const dinnerImage = import.meta.env.BASE_URL + '/StarCaboWebSite/src/assets/Img/
     width: 70%;
     height: 70%;
     border-radius: 20px;
-    background: url('../assets/Img/fotos/surf.webp') center center / cover no-repeat;
+    background: url('../assets/Img/fotos/playa-balandra.jpg') center center / cover no-repeat;
 }
 
-.titleImg {
-    position: relative;
-    left: -100px;
-    top: 150px;
-    width: 40%;
-    height: 20%;
-    background-color: white;
-    border-radius: 20px;
-}
 
 .seccionZonas {
     width: 100%;
@@ -394,6 +534,8 @@ const dinnerImage = import.meta.env.BASE_URL + '/StarCaboWebSite/src/assets/Img/
         padding-bottom: 10rem;
     }
 
+
+
     .titles {
         width: 90%;
     }
@@ -430,9 +572,6 @@ const dinnerImage = import.meta.env.BASE_URL + '/StarCaboWebSite/src/assets/Img/
         justify-content: center;
     }
 
-    .titleImg {
-        font-size: 0.8rem;
-    }
 
     .zoneIte {
         width: 97%;

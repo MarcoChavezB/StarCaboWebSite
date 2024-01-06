@@ -25,12 +25,10 @@
                 <div class="tite contenido h-full w-full"   
                      style=" margin-right: 20px; display: grid; grid-template-rows: 0.5fr 2fr;">
                     <div style="border-bottom: 1px solid; height: 5rem;">
-                        <h2 style="font-size: 2rem;">We are professionals</h2>
+                        <h2 style="font-size: 2rem;">Our Star Travelers</h2>
                     </div>
                     <div class="contenidoText flex justify-center items-center">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nemo dolorem molestias iste
-                            vitae quam corporis saepe cum quae vel, quidem veritatis exercitationem suscipit, nobis vero
-                            veniam. Laboriosam, esse sit?</p>
+                        <p>Every journey is a story, and our customers are the protagonists. Discover how Star Cabo has been a part of their special moments, from thrilling getaways to leisurely strolls. Join us on the journey of a lifetime.</p>
                     </div>
                 </div>
             </div>
