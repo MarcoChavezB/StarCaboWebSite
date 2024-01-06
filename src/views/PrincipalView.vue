@@ -174,16 +174,16 @@
 
         <div class="cardsZone gap-20 grid global-bg grid-rows-4">
             <div class="card1 flex justify-center items-center">
-                <cardLeft ico="travel" title="Airport - Hotel" img="../src/assets/Img/fotos/toAirport.jpg" />
+                <cardLeft ico="travel" title="Airport - Hotel" img="../assets/Img/fotos/toAirport.jpg" />
             </div>
             <div class="card2 flex justify-center items-center">
-                <cardRigth ico="travel" title="Dinners" img="../src/assets/Img/fotos/toDinner.jpg" />
+                <cardRigth ico="travel" title="Dinners" img="../assets/Img/fotos/toDinner.jpg" />
             </div>
             <div class="card3 flex justify-center items-center">
-                <cardLeft ico="travel" title="Activities" img="../src/assets/Img/fotos/toHotel.jpg" />
+                <cardLeft ico="travel" title="Activities" img="../assets/Img/fotos/toHotel.jpg" />
             </div>
             <div class="card4 flex justify-center items-center">
-                <cardRigth ico="travel" title="Hotel - Airpot" img="../src/assets/Img/fotos/toHotel.jpg" />
+                <cardRigth ico="travel" title="Hotel - Airpot" img="../assets/Img/fotos/toHotel.jpg" />
             </div>
         </div>
 
