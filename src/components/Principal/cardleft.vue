@@ -29,10 +29,9 @@ const props = defineProps ({
     .img , .contenedor{
         border-radius: 20px;
     }
-    .img{
-        background: url('../../assets/Img/fotos/toHotel.jpg') center center / cover no-repeat;
+    .img {
+        background: center center / cover no-repeat;
     }
-
     .contenedor{
         display: grid;
         grid-template-columns: 2fr 1fr;
