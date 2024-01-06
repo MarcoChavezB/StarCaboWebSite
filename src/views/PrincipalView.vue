@@ -394,10 +394,6 @@ const dinnerImage = import.meta.env.BASE_URL + '/StarCaboWebSite/src/assets/Img/
         padding-bottom: 10rem;
     }
 
-    .secciones {
-        grid-template-rows: 0.4fr 1.8fr 0.2fr 0.4fr 3fr 0.5fr 2.3fr 0.3fr 1fr 2fr 0.1fr 1fr;
-    }
-
     .titles {
         width: 90%;
     }

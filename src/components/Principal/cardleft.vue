@@ -8,8 +8,9 @@
                         {{ ico }}
                     </span>
                 </div>
-                <div class="title h-full flex justify-center items-center">
+                <div class="title h-full flex-col gap-5 flex justify-center items-center text-center">
                     <h1 class="orange-text font-bold">{{ title }}</h1>
+                    <p class="subtext w-4/5"> natus sint maxime error corporis aut eius eos maiores commodi ad harum ratione suscipit soluta.</p>
                 </div>
             </div>
         </div>
@@ -40,4 +41,28 @@ const props = defineProps ({
         display: grid;
         grid-template-rows: 1fr 4fr;
     }
+
+    @media screen and (max-width: 767px) {
+        
+        .contenedor{
+            grid-template-columns: 1fr;
+        }
+        .img{ 
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            position: relative;
+            height: 300px;   
+        }
+        .texto{
+            grid-template-rows: 1fr 1fr;
+            margin-top: 30px;
+
+        }
+        .title p{
+            display: none;
+        }
+        .ico{
+            display: none;
+        }
+    }
+
 </style>
