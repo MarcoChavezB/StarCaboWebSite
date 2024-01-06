@@ -177,7 +177,7 @@
                 <cardLeft ico="travel" title="Airport - Hotel" img="src/assets/Img/fotos/toAirport.jpg" />
             </div>
             <div class="card2 flex justify-center items-center">
-                <cardRigth ico="travel" title="Dinners" img="src/assets/Img/fotos/toDinner.jpg" />
+                <cardRigth ico="travel" title="Dinners" :img="dinnerImage" />
             </div>
             <div class="card3 flex justify-center items-center">
                 <cardLeft ico="travel" title="Activities" img="src/assets/Img/fotos/toActivitie.jpg" />
@@ -258,6 +258,8 @@
 </template>
 
 <script setup>
+import {ref} from 'vue'
+
 import cardLeft from "../components/Principal/cardleft.vue"
 import cardRigth from '../components/Principal/cardRight.vue'
 import zona from "../components/General/zonas.vue"
@@ -266,6 +268,8 @@ import footerComp from "../components/Principal/footer.vue"
 import HeaderComp from "../components/Principal/TopNavbar.vue"
 import ctaFoto from "../components/Principal/ctaFoto.vue"
 import rightMessaje from "../components/Principal/rightMessaje.vue"
+
+const dinnerImage = import.meta.env.BASE_URL + 'src/assets/Img/fotos/toDinner.jpg';
 </script>
 
 
