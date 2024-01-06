@@ -5,13 +5,11 @@
       <div class="p-8 md:p-12 lg:px-16 lg:py-24" style="background-color: #312e1b;">
         <div class="mx-auto max-w-xl h-full flex flex-col justify-center">
           <h2 class="text-2xl font-bold text-white md:text-3xl text-left">
-            Let’s explore the beauty of Los Cabos
+            Your Journey, Your Style
           </h2>
 
           <p class="hidden text-white/90 sm:mt-4 sm:block text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus 
-          </p>
-
+            Experience comfort in motion with our stylish transportation and luxurious hotel retreats. Your unique style, our priority. Make every moment unforgettable!          </p>
           <div class="mt-4 md:mt-8 flex">
           </div>
         </div>

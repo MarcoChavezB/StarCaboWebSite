@@ -133,22 +133,22 @@ const selectAll = ref(true)
 const showAlert = ref(false)
 
 const getHotelsZone1 = async () => {
-    const { data } = await axios.get('http://127.0.0.1:8000/hotels/zone/1')
+    const { data } = await axios.get('http://3.144.182.13/hotels/zone/1')
     hotelsZone1.value = data
 }
 
 const getHotelsZone2 = async () => {
-    const { data } = await axios.get('http://127.0.0.1:8000/hotels/zone/2')
+    const { data } = await axios.get('http://3.144.182.13/hotels/zone/2')
     hotelsZone2.value = data
 }
 
 const getHotelsZone3 = async () => {
-    const { data } = await axios.get('http://127.0.0.1:8000/hotels/zone/3')
+    const { data } = await axios.get('http://3.144.182.13/hotels/zone/3')
     hotelsZone3.value = data
 }
 
 const getHotelsZone4 = async () => {
-    const { data } = await axios.get('http://127.0.0.1:8000/hotels/zone/4')
+    const { data } = await axios.get('http://3.144.182.13/hotels/zone/4')
     hotelsZone4.value = data
 }
 

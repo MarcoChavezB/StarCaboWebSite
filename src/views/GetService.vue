@@ -533,6 +533,10 @@ option {
     z-index: 1000;
 }
 
+.grat-message h1 {
+    color: rgb(31 41 55);
+}
+
 .modal-message {
     position: absolute;
     bottom: 3rem;
@@ -798,7 +802,7 @@ const validarCampos = () => {
 // Peticiones1
 
 const getHotels = async () => {
-    const res = await axios.get('http://127.0.0.1:8000/hotels/name')
+    const res = await axios.get('http://3.144.182.13/hotels/name')
     hotels.value = res.data
 }
 
@@ -807,13 +811,13 @@ const getTotal = async () => {
         destine1: end_location.value,
         destine2: second_end_location.value
     }
-    const res = await axios.post('http://127.0.0.1:8000/destines/pay', datas)
+    const res = await axios.post('http://3.144.182.13/destines/pay', datas)
     total_price.value = res.data.price
 }
 
 const getInformacionById = async (id) => {
     try {
-        const response = await axios.get(`http://127.0.0.1:8000/hotels/id/${id}`);
+        const response = await axios.get(`http://3.144.182.13/hotels/id/${id}`);
         preInfo.value = response.data
         end_location.value = preInfo.value.name
     } catch (error) {
@@ -851,7 +855,7 @@ const SendEmail = async () => {
             },
         };
 
-        await axios.post('http://127.0.0.1:8000/send-email', data);
+        await axios.post('http://3.144.182.13/send-email', data);
         showGrats.value = true
     } catch (error) {
         console.error('Error al enviar el correo:', error);
