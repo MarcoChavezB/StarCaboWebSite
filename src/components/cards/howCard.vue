@@ -21,7 +21,7 @@
                             class="relative bg-white inline-flex items-center justify-center w-20 h-20 overflow-hidden rounded-full">
                             <span class="material-symbols-outlined orange">payments</span>
                         </div>
-                        <h4 class="tit subtext">Pay in arrive</h4>
+                        <h4 class="tit subtext">Pay in arrive.</h4>
                     </div>
                 </div>
             </div>
