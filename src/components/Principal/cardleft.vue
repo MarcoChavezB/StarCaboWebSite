@@ -30,7 +30,7 @@ const props = defineProps ({
         border-radius: 20px;
     }
     .img{
-        background: url('../src/assets/Img/fotos/toHotel.jpg') center center / cover no-repeat;
+        background: url('../../assets/Img/fotos/toHotel.jpg') center center / cover no-repeat;
     }
 
     .contenedor{

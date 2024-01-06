@@ -266,7 +266,7 @@ import rightMessaje from "../components/Principal/rightMessaje.vue"
     width: 70%;
     height: 70%;
     border-radius: 20px;
-    background: url('../src/assets/Img/fotos/surf.webp') center center / cover no-repeat;
+    background: url('../assets/Img/fotos/surf.webp') center center / cover no-repeat;
 }
 
 .titleImg {
