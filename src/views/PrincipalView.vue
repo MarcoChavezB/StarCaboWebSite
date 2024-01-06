@@ -258,8 +258,6 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
-
 import cardLeft from "../components/Principal/cardleft.vue"
 import cardRigth from '../components/Principal/cardRight.vue'
 import zona from "../components/General/zonas.vue"
@@ -269,7 +267,7 @@ import HeaderComp from "../components/Principal/TopNavbar.vue"
 import ctaFoto from "../components/Principal/ctaFoto.vue"
 import rightMessaje from "../components/Principal/rightMessaje.vue"
 
-const dinnerImage = import.meta.env.BASE_URL + 'src/assets/Img/fotos/toDinner.jpg';
+const dinnerImage = import.meta.env.BASE_URL + '/StarCaboWebSite/src/assets/Img/fotos/toDinner.jpg';
 </script>
 
 
