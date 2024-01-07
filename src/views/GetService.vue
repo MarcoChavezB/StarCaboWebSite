@@ -317,7 +317,7 @@ option {
             </div>
         </div>
     </div>
-    <div class="modals flex justify-center items-end" v-if="showModal">
+    <div class="modals  flex justify-center items-end" v-if="showModal">
         <div class="cont bg-white shadow rounded-lg flex justify-center items-center" style="height: auto;">
             <div class="intra-layout grid" style="grid-template-rows: 1fr 6fr 1fr;">
                 <div class="flex" style="border-bottom: 1px solid gray;">
@@ -641,6 +641,10 @@ option {
     .cont{
         width: 100%;
     }
+
+    .formulario-cont{
+        height: 70vh;
+    }
 }
 </style>
 
@@ -709,6 +713,7 @@ const arrive_information = ref({
     arrive_date: arrive_date.value,
     number_passengers: number_passengers.value,
     time: time.value,
+    total: total_price.value
 })
 
 const second_arrive_information = ref({
@@ -839,6 +844,7 @@ const SendEmail = async () => {
                 arrive_date: arrive_date.value,
                 number_passengers: number_passengers.value,
                 time: time.value,
+                total: total_price.value
             },
             second_arrive_information: {
                 star_location: second_start_location.value,
