@@ -47,7 +47,7 @@ watch(() => store.variableDeEstado, (value) => {
     grid-template-rows: 0.2fr 2.4fr; 
     gap: 0px 0px; 
     height: 100vh;
-    background: url('../src/assets/Img/fotos/carroCasa.jpeg') center center / cover no-repeat;
+    background: url('../src/assets/Img/fotos/carro6.jpeg') center center / cover no-repeat;
 }
 
 .ease-in{

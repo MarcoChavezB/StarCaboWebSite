@@ -17,7 +17,7 @@
         </div>
 
         <!--Seccion 2-->
-        <div class="borderr color-background" style="border-radius: 20px 20px 0px 0px;"></div>
+        <div class="borderr color-background " style="border-radius: 20px 20px 0px 0px; height: 10vh;"></div>
         <!--Seccion 3-->
         <div class="sec2 flex justify-center items-center color-background p-20">
             <div class="contenedor flex justify-center items-center h-full contenedor-mobil">
@@ -117,11 +117,11 @@
         </div>
 
         <!--Seccion 6-->
-        <div class="sec5 flex justify-center items-center color-background">
+        <div class="sec5 flex justify-center items-center color-background" style="height: 100vh;">
             <div class="container_center ">
                 <div class=" seccionZonas felx justify-center items-center">
                     <div class="grid gap-20 grid-cols-2 grid-rows-1 h-full w-full tk-grid">
-                        <div class="imgzone flex ">
+                        <div class="imgzone flex justify-center ">
                             <div class="img "></div>
                         </div>
                         <div class="flex justify-center h-full zoneIte ">
@@ -173,8 +173,8 @@
                 <div class="card-left h-full w-4/5 flex justify-center items-center ">
                     <div class="intra-layout contenedor-left shadow bg-white">
                         <div :style="{ backgroundImage: 'url(' + airportImage  + ')' }" class="img-left bg-black"></div>
-                        <div class="texto">
-                            <div class="ico flex justify-end mr-10 items-center">
+                        <div class="texto-left">
+                            <div class="ico-left flex justify-end mr-10 items-center">
                                 <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
                                     travel
                                 </span>
@@ -211,8 +211,8 @@
                 <div class="card-left h-full w-4/5 flex justify-center items-center ">
                     <div class="intra-layout contenedor-left shadow bg-white">
                         <div :style="{ backgroundImage: 'url(' + hotelImage  + ')' }" class="img-left bg-black"></div>
-                        <div class="texto">
-                            <div class="ico flex justify-end mr-10 items-center">
+                        <div class="texto-left">
+                            <div class="ico-left flex justify-end mr-10 items-center">
                                 <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
                                     apartment
                                 </span>
@@ -251,7 +251,7 @@
         </div>
 
 
-        <div class="sec6 color-background">
+        <div class="sec6 color-background flex justify-center items-center">
             <div class="title3 flex justify-center items-center">
                 <h2 class="orangeText">How we can help your journey</h2>
             </div>
@@ -344,6 +344,14 @@ const airportImg = ref(airportImage)
 
 
 <style scoped>
+
+.cardsZone{
+    height: 200vh;
+}
+.sec6{
+    height: 30vh;
+}
+
 .img-left , .contenedor-left{
         border-radius: 20px;
     }
@@ -354,33 +362,11 @@ const airportImg = ref(airportImage)
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
-    .texto{
+    .texto-left{
         display: grid;
         grid-template-rows: 1fr 4fr;
     }
 
-    @media screen and (max-width: 767px) {
-        
-        .contenedor-left{
-            grid-template-columns: 1fr;
-        }
-        .img{ 
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-            position: relative;
-            height: 300px;   
-        }
-        .texto{
-            grid-template-rows: 1fr 1fr;
-            margin-top: 30px;
-
-        }
-        .title-left p{
-            display: none;
-        }
-        .ico{
-            display: none;
-        }
-    }
 
     .img-right, .contenedor-right {
         border-radius: 20px;
@@ -400,36 +386,14 @@ const airportImg = ref(airportImage)
         grid-template-rows: 1fr 4fr;
     }
 
-    @media screen and (max-width: 767px) {
-        .ico-right, p{
-            display: none;
-        }
-        .img-right {
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-            height: 300px;   
-            order: -1; 
-        }
-        .contenedor-right{
-            grid-template-columns: 1fr;
-        }
-        .title-right{
-            margin-top: 30px;
-        }
-        .texto-right{
-            grid-template-rows: 1fr 3fr;
-        }
-    
-    }
+
 
 .color-background {
     background-color: #f5f4ed;
 }
 
 .secciones {
-    display: grid;
-    height: 700vh;
-    grid-template-rows: 0.1fr 1.8fr 0.1fr 0.3fr 0.2fr 1fr 4.3fr 0.3fr 0.5fr 2fr 0.1fr 1fr;
-    grid-auto-columns: 1fr;
+    height: auto;
 }
 
 .rightMessaje {
@@ -454,7 +418,7 @@ const airportImg = ref(airportImage)
 }
 
 .zoneIte {
-    margin-right: 2rem;
+    margin-right: 1rem
 }
 
 .destination {
@@ -485,10 +449,8 @@ const airportImg = ref(airportImage)
 }
 
 .img {
-    position: relative;
-    left: 90px;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 100%;
     border-radius: 20px;
     background: url('../assets/Img/fotos/playa-balandra.jpg') center center / cover no-repeat;
 }
@@ -518,6 +480,9 @@ const airportImg = ref(airportImage)
 /* MOBILE   */
 
 @media screen and (max-width: 767px) {
+    .cardsZone{
+        height: 300vh;
+    }
     .sec2 {
         padding: 0;
     }
@@ -531,11 +496,8 @@ const airportImg = ref(airportImage)
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 0;
-        padding-bottom: 10rem;
+        padding-bottom: 5rem;
     }
-
-
-
     .titles {
         width: 90%;
     }
@@ -553,7 +515,7 @@ const airportImg = ref(airportImage)
     }
 
     .sec8 {
-        height: 73vh;
+        height: 80vh;
     }
 
     .tk-grid {
@@ -563,6 +525,7 @@ const airportImg = ref(airportImage)
 
     .textzone {
         text-align: center;
+        gap: 1.3rem;
     }
 
     .airport,
@@ -574,11 +537,51 @@ const airportImg = ref(airportImage)
 
 
     .zoneIte {
-        width: 97%;
+        width: 100%;
     }
 
     .rightMessaje {
         display: none;
     }
 }
+
+@media screen and (max-width: 767px) {
+        .ico-right{
+            display: none;
+        }
+        .img-right {
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            height: 300px;   
+            order: -1; 
+        }
+        .contenedor-right{
+            grid-template-columns: 1fr;
+        }
+        .title-right{
+            margin-top: 30px;
+        }
+        .texto-right{
+            grid-template-rows: 1fr 1fr;
+        }
+    
+    }
+
+    @media screen and (max-width: 767px) {
+        
+        .contenedor-left{
+            grid-template-columns: 1fr;
+        }
+        .img-left{ 
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            height: 300px;   
+        }
+        .texto-left{
+            grid-template-rows: 1fr 1fr;
+            margin-top: 30px;
+        }
+
+        .ico-left{
+            display: none;
+        }
+    }
 </style>

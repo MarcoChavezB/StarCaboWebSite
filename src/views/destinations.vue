@@ -5,7 +5,7 @@
             <div class="searchComponents grid grid-rows-2 grid-cols-1 gap-10">
                 <div class="title tx text-white ">
                     <h1>Discover  your next destination</h1>
-                    <p>You can find yout destinationnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn</p>
+                    <p>You can find yout destination</p>
                 </div>
                 <div class="controlers flex justify-end  items-end gap-3">
                     <select name="Zonas" id="" class="flex" v-model="zoneSelect">

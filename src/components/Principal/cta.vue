@@ -36,30 +36,14 @@
 </section>
 </template>
 
-<script setup>
-import axios from 'axios'
-import { onMounted, ref } from "vue";
-
-const hotelData = ref({
-  name: "",
-  location: "",
-  cellphone: "",
-  rating: 0,
-  website: "",
-  is_open: false,
-  image: ""
-});
-
-const getData = async () => {
-    const response = await axios.get('http://192.168.1.11:8000/info/hotel/ChIJ10lh6Pg1r4YRrvtcw6IZmu4');
-    hotelData.value = response.data;
-};
-
-</script>
-
-
 <style scoped>
 .img1{
   background-color: #575130;
+}
+
+@media screen and (max-width: 767px) {
+  .text-2xl{
+    margin: auto;
+  }
 }
 </style>
