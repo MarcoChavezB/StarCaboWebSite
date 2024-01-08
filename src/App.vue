@@ -64,4 +64,10 @@ watch(() => store.variableDeEstado, (value) => {
   }
 }
 
+@media only screen and (max-width: 768px) {
+    .back{
+        background: url('../src/assets/Img/fotos/carroMD.jpeg') center center / cover no-repeat;
+    }
+}
+
 </style>
