@@ -169,20 +169,44 @@ option {
                                                         v-model="flight_number"
                                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  ">
 
-                                                    <input placeholder="Airline" v-if="show_data_travel" v-model="airline"
+                                                    <select placeholder="Airline" v-if="show_data_travel" v-model="airline"
                                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  ">
+                                                        <option value="" disabled selected>Airline</option>
+                                                        <option value="aeromexico">Aeroméxico</option>
+                                                        <option value="aeromexico-connect">Aeroméxico Connect</option>
+                                                        <option value="aeromar">Aeromar</option>
+                                                        <option value="aeroenlaces-nacionales">Aeroenlaces Nacionales</option>
+                                                        <option value="magnicharters">Magnicharters</option>
+                                                        <option value="tar-aerolineas">TAR Aerolíneas</option>
+                                                        <option value="volaris">Volaris</option>
+                                                        <option value="vivaaerobus">Viva Aerobus</option>
+                                                        <option value="alaska-airlines">Alaska Airlines</option>
+                                                        <option value="american-airlines">American Airlines</option>
+                                                        <option value="delta-air-lines">Delta Air Lines</option>
+                                                        <option value="frontier-airlines">Frontier Airlines</option>
+                                                        <option value="jetblue-airways">JetBlue Airways</option>
+                                                        <option value="southwest-airlines">Southwest Airlines</option>
+                                                        <option value="sun-country-airlines">Sun Country Airlines</option>
+                                                        <option value="united-airlines">United Airlines</option>
 
-                                                    <input type="date" placeholder="Arrive date" v-model="arrive_date"
+                                                    </select>
+                                                    <div class="w-full flex flex-col">
+                                                        <p style="font-size: 0.6rem;">Date Arrival</p>
+                                                        <input type="date" placeholder="Arrive date" v-model="arrive_date"
                                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  ">
+                                                    </div>
                                                 </div>
 
                                                 <div class="flex gap-2">
                                                     <input type="number" placeholder="# passengers"
                                                         v-model="number_passengers"
                                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  ">
-
-                                                    <input type="time" placeholder="" v-model="time"
+                                                    
+                                                    <div class="inputtitle w-full">
+                                                        <p style="font-size: 0.6rem;">Time Arrival</p>
+                                                        <input type="time" placeholder="" v-model="time"
                                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  ">
+                                                    </div>
 
                                                 </div>
                                             </div>
@@ -236,9 +260,27 @@ option {
                                                         v-model="second_flight_number"
                                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  ">
 
-                                                    <input placeholder="Airline" v-if="show_data_travel2"
+                                                    <select placeholder="Airline" v-if="show_data_travel2"
                                                         v-model="second_airline"
                                                         class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  ">
+                                                        <option value="" disabled selected>Airline</option>
+                                                        <option value="aeromexico">Aeroméxico</option>
+                                                        <option value="aeromexico-connect">Aeroméxico Connect</option>
+                                                        <option value="aeromar">Aeromar</option>
+                                                        <option value="aeroenlaces-nacionales">Aeroenlaces Nacionales</option>
+                                                        <option value="magnicharters">Magnicharters</option>
+                                                        <option value="tar-aerolineas">TAR Aerolíneas</option>
+                                                        <option value="volaris">Volaris</option>
+                                                        <option value="vivaaerobus">Viva Aerobus</option>
+                                                        <option value="alaska-airlines">Alaska Airlines</option>
+                                                        <option value="american-airlines">American Airlines</option>
+                                                        <option value="delta-air-lines">Delta Air Lines</option>
+                                                        <option value="frontier-airlines">Frontier Airlines</option>
+                                                        <option value="jetblue-airways">JetBlue Airways</option>
+                                                        <option value="southwest-airlines">Southwest Airlines</option>
+                                                        <option value="sun-country-airlines">Sun Country Airlines</option>
+                                                        <option value="united-airlines">United Airlines</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>

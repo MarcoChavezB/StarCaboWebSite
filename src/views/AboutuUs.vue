@@ -1,5 +1,5 @@
 <template>
-    <section class="grid global-bg" style="grid-template-rows: 1fr 0.5fr 0.7fr 0.5fr;">
+    <section class="grid global-bg" id="principalScroll" style="grid-template-rows: 1fr 0.5fr 0.7fr 0.5fr;">
         <div class="main global-bg flex items-center justify-around gap-10" >
             <img src="../assets/Img/fotos/aboutus.webp">
             <div class="all-text">
@@ -82,7 +82,13 @@
 
 
 <script setup>
+import { onMounted } from "vue";
 import footerVue from "../components/Principal/footer.vue";
+
+onMounted(() =>{
+    const nextSection = document.getElementById('principalScroll');
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+})
 </script>
 
 <style scoped>

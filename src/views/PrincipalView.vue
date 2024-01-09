@@ -1,5 +1,5 @@
 <template>
-    <div class="secciones">
+    <div class="secciones" id="principalScroll">
         <div class="headerComp">
             <HeaderComp />
         </div>
@@ -168,25 +168,8 @@
             </div>
         </div>
 
-        <div class="cardsZone gap-20 grid global-bg grid-rows-4">
-            <div class="card1 flex justify-center items-center">
-                <div class="card-left h-full w-4/5 flex justify-center items-center ">
-                    <div class="intra-layout contenedor-left shadow bg-white">
-                        <div :style="{ backgroundImage: 'url(' + airportImage  + ')' }" class="img-left bg-black"></div>
-                        <div class="texto-left">
-                            <div class="ico-left flex justify-end mr-10 items-center">
-                                <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
-                                    travel
-                                </span>
-                            </div>
-                            <div class="title-left h-full flex-col gap-5 flex justify-center items-center text-center">
-                                <h1 class="orange-text font-bold">Airport - Hotel</h1>
-                                <p class="subtext w-4/5"> natus sint maxime error corporis aut eius eos maiores commodi ad harum ratione suscipit soluta.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="cardsZone gap-20 grid global-bg grid-rows-2">
+
             <div class="card2 flex justify-center items-center">
                 <div class="card-left h-full w-4/5 flex justify-center items-center ">
                         <div class="intra-layout contenedor-right shadow bg-white">
@@ -210,7 +193,7 @@
             <div class="card3 flex justify-center items-center">
                 <div class="card-left h-full w-4/5 flex justify-center items-center ">
                     <div class="intra-layout contenedor-left shadow bg-white">
-                        <div :style="{ backgroundImage: 'url(' + hotelImage  + ')' }" class="img-left bg-black"></div>
+                        <div :style="{ backgroundImage: 'url(' + expeditionsImage  + ')' }" class="img-left bg-black"></div>
                         <div class="texto-left">
                             <div class="ico-left flex justify-end mr-10 items-center">
                                 <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
@@ -218,7 +201,7 @@
                                 </span>
                             </div>
                             <div class="title-left h-full flex-col gap-5 flex justify-center items-center text-center">
-                                <h1 class="orange-text font-bold">Hotel - Airport</h1>
+                                <h1 class="orange-text font-bold">Expeditions</h1>
                                 <p class="subtext w-4/5"> 
                                     Arrive at your hotel effortlessly. Our Airport - Hotel service ensures efficient and comfortable transfers
                                 </p>
@@ -228,26 +211,7 @@
                 </div>
             </div>
             <div class="card4 flex justify-center items-center">
-                <div class="card-left h-full w-4/5 flex justify-center items-center ">
-                        <div class="intra-layout contenedor-right shadow bg-white">
-                            <div class="texto-right">
-                                <div class="ico-right flex justify-start ml-10 items-center">
-                                    <span class="material-symbols-outlined orange-text" style="font-size: 2rem;">
-                                        sports_gymnastics
-                                    </span>
-                                </div>
-                                <div class="title-right flex-col text-center h-full flex justify-center items-center">
-                                    <h1 class="orange-text font-bold">Activities</h1>
-                                    <p class="subtext w-4/5"> 
-                                        Embark on new adventures with our Activities service. Every moment is an exploration
-                                    </p>
-
-                                </div>
-                            </div>
-                            <div :style="{ backgroundImage: 'url(' + activitiesImage + ')' }" class="img-right bg-black"></div>
-                        </div>
-                    </div> 
-                            </div>
+        </div>
         </div>
 
 
@@ -321,9 +285,6 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
-import cardLeft from "../components/Principal/cardleft.vue"
-import cardRigth from '../components/Principal/cardRight.vue'
 import zona from "../components/General/zonas.vue"
 import cta from "../components/Principal/cta.vue"
 import footerComp from "../components/Principal/footer.vue"
@@ -332,21 +293,20 @@ import ctaFoto from "../components/Principal/ctaFoto.vue"
 import rightMessaje from "../components/Principal/rightMessaje.vue"
 
 import dinnerImage from "../assets/Img/fotos/toDinner.jpg";
-import hotelImage from "../assets/Img/fotos/toHotel.jpg";
-import activitiesImage from "../assets/Img/fotos/toActivitie.jpg";
-import airportImage from "../assets/Img/fotos/toAirport.jpg";
+import expeditionsImage from "../assets/Img/fotos/santos.jpg";
+import { onMounted } from "vue"
 
-const hotelImg = ref(hotelImage)
-const dinnerImg = ref(dinnerImage)
-const activitiesImg = ref(activitiesImage)
-const airportImg = ref(airportImage)
+onMounted(() =>{
+    const nextSection = document.getElementById('principalScroll');
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+})
 </script>
 
 
 <style scoped>
 
 .cardsZone{
-    height: 200vh;
+    height: 100vh;
 }
 .sec6{
     height: 30vh;
@@ -481,7 +441,7 @@ const airportImg = ref(airportImage)
 
 @media screen and (max-width: 767px) {
     .cardsZone{
-        height: 300vh;
+        height: 150vh;
     }
     .sec2 {
         padding: 0;

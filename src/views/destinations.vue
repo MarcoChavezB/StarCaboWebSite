@@ -1,5 +1,5 @@
 <template>
-    <div class="principalView">
+    <div class="principalView" id="principalScroll">
         <div class="backgroundImage"></div>
         <div class="overlayContent">
             <div class="searchComponents grid grid-rows-2 grid-cols-1 gap-10">
@@ -37,7 +37,7 @@
             </div>
             <div class="flex-body global-bg flex justify-center">
                 <div class="body">
-                    <div class="bodycard grid">
+                    <div class="bodycard grid" id="scroll">
 
                         <div class="zonas grid gap-10">
                             <div class="hotels flex flex-col" v-if="showZone4">
@@ -153,6 +153,10 @@ const getHotelsZone4 = async () => {
 }
 
 const hotelsByZone = () => {
+
+    const nextSection = document.getElementById('scroll');
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+
     selectAll.value = false
     switch(zoneSelect.value) {
         case 'zone1':
@@ -208,6 +212,8 @@ onMounted(() => {
     getHotelsZone2();
     getHotelsZone3();
     getHotelsZone4();
+    const nextSection = document.getElementById('principalScroll');
+    nextSection.scrollIntoView({ behavior: 'smooth' });
 });
 </script>
   
@@ -285,7 +291,7 @@ option {
 .backgroundImage {
     width: 100%;
     height: 100%;
-    background-image: url('../assets/Img/fotos/back.jpg');
+    background-image: url('../assets/Img/fotos/carroblack.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
